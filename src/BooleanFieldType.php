@@ -1,4 +1,4 @@
-<?php namespace Addon\FieldType\Boolean;
+<?php namespace Streams\Addon\FieldType\Boolean;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 use Streams\Core\Model\EntryModel;
