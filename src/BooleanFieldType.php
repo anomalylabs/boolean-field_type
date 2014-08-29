@@ -13,23 +13,6 @@ class BooleanFieldType extends FieldTypeAbstract
     public $columnType = 'boolean';
 
     /**
-     * Field type version
-     *
-     * @var string
-     */
-    public $version = '1.1.0';
-
-    /**
-     * Field type author information.
-     *
-     * @var array
-     */
-    public $author = array(
-        'name' => 'AI Web Systems, Inc.',
-        'url'  => 'http://aiwebsystems.com/',
-    );
-
-    /**
      * Return form input.
      *
      * @return string
@@ -37,10 +20,10 @@ class BooleanFieldType extends FieldTypeAbstract
     public function input()
     {
         $options = array(
-            'class' => 'switch',
+            'class' => 'boolean-field-type',
         );
 
-        return \Form::checkbox($this->postKey(), true, $this->value(), $options);
+        return \Form::checkbox($this->name(), true, $this->value(), $options);
     }
 
     public function value()
