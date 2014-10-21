@@ -19,21 +19,14 @@ class BooleanFieldType extends FieldTypeAddon
     public function input()
     {
         $options = array(
-            'id' => $this->fieldName(),
+            'class' => 'boolean-field-type',
         );
 
-        return \Form::checkbox($this->fieldName(), true, $this->value, $options);
+        return \Form::checkbox($this->formName(), true, $this->value, $options);
     }
 
-    /**
-     * Return the form input element output.
-     *
-     * @return mixed
-     */
-    public function element()
+    public function setValue()
     {
-        $field = $this->assignment->field;
-
-        return \View::make('field_type.boolean::element', compact('field'));
+        return (boolean) parent::value();
     }
 }
