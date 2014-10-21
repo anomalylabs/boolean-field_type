@@ -1,4 +1,4 @@
-<?php namespace Streams\Addon\FieldType\Boolean;
+<?php namespace Anomaly\Streams\FieldType\Boolean;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 use Streams\Core\Model\EntryModel;
