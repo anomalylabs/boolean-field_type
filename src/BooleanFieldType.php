@@ -24,9 +24,4 @@ class BooleanFieldType extends FieldTypeAddon
 
         return \Form::checkbox($this->formName(), true, $this->value, $options);
     }
-
-    public function setValue()
-    {
-        return (boolean) parent::value();
-    }
 }
