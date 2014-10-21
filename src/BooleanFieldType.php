@@ -23,10 +23,10 @@ class BooleanFieldType extends FieldTypeAbstract
             'class' => 'boolean-field-type',
         );
 
-        return \Form::checkbox($this->name(), true, $this->value(), $options);
+        return \Form::checkbox($this->formName(), true, $this->value, $options);
     }
 
-    public function value()
+    public function setValue()
     {
         return (boolean) parent::value();
     }
