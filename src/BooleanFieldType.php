@@ -12,6 +12,13 @@ class BooleanFieldType extends FieldTypeAddon
     public $columnType = 'boolean';
 
     /**
+     * The element view.
+     *
+     * @var string
+     */
+    protected $elementView = 'field_type.boolean::element';
+
+    /**
      * Return form input.
      *
      * @return string
@@ -19,9 +26,9 @@ class BooleanFieldType extends FieldTypeAddon
     public function input()
     {
         $options = array(
-            'class' => 'boolean-field-type',
+            'id' => $this->fieldName(),
         );
 
-        return \Form::checkbox($this->formName(), true, $this->value, $options);
+        return \Form::checkbox($this->fieldName(), true, $this->value, $options);
     }
 }
