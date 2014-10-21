@@ -1,9 +1,8 @@
-<?php namespace Anomaly\Streams\FieldType\Boolean;
+<?php namespace Anomaly\Streams\Addon\FieldType\Boolean;
 
-use Streams\Core\Addon\FieldTypeAbstract;
-use Streams\Core\Model\EntryModel;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
-class BooleanFieldType extends FieldTypeAbstract
+class BooleanFieldType extends FieldTypeAddon
 {
     /**
      * The database column type this field type uses.
