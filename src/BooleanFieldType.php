@@ -1,8 +1,8 @@
 <?php namespace Anomaly\Streams\Addon\FieldType\Boolean;
 
-use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
-class BooleanFieldType extends FieldTypeAddon
+class BooleanFieldType extends FieldType
 {
     public $columnType = 'boolean';
 
