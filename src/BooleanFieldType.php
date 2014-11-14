@@ -14,4 +14,9 @@ class BooleanFieldType extends FieldType
 
         return \Form::checkbox($this->fieldName(), true, $this->value, $options);
     }
+
+    protected function onSet($value)
+    {
+        return boolean($value);
+    }
 }
