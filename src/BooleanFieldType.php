@@ -28,13 +28,6 @@ class BooleanFieldType extends FieldType
     protected $inputView = 'field_type.boolean::input';
 
     /**
-     * The input wrapper view.
-     *
-     * @var string
-     */
-    protected $wrapperView = 'field_type.boolean::wrapper';
-
-    /**
      * Mutate the value when setting on the model.
      *
      * @param $value
