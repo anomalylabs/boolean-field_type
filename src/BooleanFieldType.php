@@ -35,6 +35,39 @@ class BooleanFieldType extends FieldType
     protected $wrapperView = 'field_type.boolean::wrapper';
 
     /**
+     * Mutate the value when setting on the model.
+     *
+     * @param $value
+     * @return mixed
+     */
+    function mutate($value)
+    {
+        return boolean($value);
+    }
+
+    /**
+     * Unmutate the value when getting off the model.
+     *
+     * @param $value
+     * @return mixed
+     */
+    function unmutate($value)
+    {
+        return boolean($value);
+    }
+
+    /**
+     * Get the value. Just another check to make
+     * sure we're always dealing with booleans.
+     *
+     * @return mixed
+     */
+    public function getValue()
+    {
+        return boolean(parent::getValue());
+    }
+
+    /**
      * Get view data for the input.
      *
      * @return array
@@ -43,7 +76,7 @@ class BooleanFieldType extends FieldType
     {
         $data = parent::getInputData();
 
-        $data['checked'] = ($this->getValue());
+        $data['checked'] = $this->getValue();
 
         // This is API configuration for the plugin.
         $data['on']  = trans($this->getConfig('on', 'misc.enabled'));
