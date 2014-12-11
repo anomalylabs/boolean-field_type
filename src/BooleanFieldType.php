@@ -35,7 +35,7 @@ class BooleanFieldType extends FieldType
      */
     function mutate($value)
     {
-        return boolean($value);
+        return filter_var($value, FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
@@ -46,7 +46,7 @@ class BooleanFieldType extends FieldType
      */
     function unmutate($value)
     {
-        return boolean($value);
+        return filter_var($value, FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
@@ -57,7 +57,7 @@ class BooleanFieldType extends FieldType
      */
     public function getValue()
     {
-        return boolean(parent::getValue());
+        return filter_var(parent::getValue(), FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
