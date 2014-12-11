@@ -72,13 +72,13 @@ class BooleanFieldType extends FieldType
         $data['checked'] = $this->getValue();
 
         // This is API configuration for the plugin.
-        $data['on']  = trans($this->getConfig('on', 'misc.enabled'));
-        $data['off'] = trans($this->getConfig('off', 'misc.disabled'));
+        $data['on']  = trans($this->pullConfig('on', 'misc.enabled'));
+        $data['off'] = trans($this->pullConfig('off', 'misc.disabled'));
 
-        $data['size'] = $this->getConfig('size', 'normal');
+        $data['size'] = $this->pullConfig('size', 'normal');
 
-        $data['onstyle']  = $this->getConfig('onstyle', 'success');
-        $data['offstyle'] = $this->getConfig('offstyle', 'default');
+        $data['onstyle']  = $this->pullConfig('onstyle', 'success');
+        $data['offstyle'] = $this->pullConfig('offstyle', 'default');
 
         return $data;
     }
