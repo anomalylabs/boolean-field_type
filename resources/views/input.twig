@@ -1,5 +1,5 @@
-{{ asset.add group="streams.css" file="field_type.boolean::css/bootstrap-toggle.css" }}
-{{ asset.add group="streams.js" file="field_type.boolean::js/bootstrap-toggle.min.js" }}
+{{ add_asset("streams.css", "field_type.boolean::css/bootstrap-toggle.css") }}
+{{ add_asset("streams.js", "field_type.boolean::js/bootstrap-toggle.min.js") }}
 
 <input
         type="checkbox"
@@ -11,5 +11,5 @@
         data-size="{{ size }}"
         data-onstyle="{{ onstyle }}"
         data-offstyle="{{ offstyle }}"
-        {{ checked then 'checked' }}
->
+        {{ checked ? 'checked' }}
+        >
