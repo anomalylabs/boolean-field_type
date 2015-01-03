@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\FieldType\Boolean;
+<?php namespace Anomaly\BooleanFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
