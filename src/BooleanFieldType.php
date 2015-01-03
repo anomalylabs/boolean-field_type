@@ -25,7 +25,7 @@ class BooleanFieldType extends FieldType
      *
      * @var string
      */
-    protected $inputView = 'field_type.boolean::input';
+    protected $inputView = 'anomaly.field_type.boolean::input';
 
     /**
      * Mutate the value when setting on the model.
