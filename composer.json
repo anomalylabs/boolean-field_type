@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/boolean-field-type",
+    "name": "anomaly/boolean-field_type",
     "type": "streams-addon",
     "description": "Boolean field type.",
     "authors": [
