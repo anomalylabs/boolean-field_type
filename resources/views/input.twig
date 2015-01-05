@@ -3,13 +3,13 @@
 
 <input
         type="checkbox"
-        name="{{ name }}"
-        class="{{ class }}"
+        class="form-control"
+        name="{{ field_type.getFieldName() }}"
         data-toggle="toggle"
-        data-on="{{ on }}"
-        data-off="{{ off }}"
-        data-size="{{ size }}"
-        data-onstyle="{{ onstyle }}"
-        data-offstyle="{{ offstyle }}"
-        {{ checked ? 'checked' }}
+        data-on="{{ field_type.config.on }}"
+        data-off="{{ field_type.config.off }}"
+        data-size="{{ field_type.config.size }}"
+        data-onstyle="{{ field_type.config.on_style }}"
+        data-offstyle="{{ field_type.config.off_style }}"
+        {{ field_type.value ? 'checked' }}
         >

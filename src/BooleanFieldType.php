@@ -59,27 +59,4 @@ class BooleanFieldType extends FieldType
     {
         return filter_var(parent::getValue(), FILTER_VALIDATE_BOOLEAN);
     }
-
-    /**
-     * Get view data for the input.
-     *
-     * @return array
-     */
-    public function getInputData()
-    {
-        $data = parent::getInputData();
-
-        $data['checked'] = $this->getValue();
-
-        // This is API configuration for the plugin.
-        $data['on']  = trans($this->pullConfig('on', 'misc.enabled'));
-        $data['off'] = trans($this->pullConfig('off', 'misc.disabled'));
-
-        $data['size'] = $this->pullConfig('size', 'normal');
-
-        $data['onstyle']  = $this->pullConfig('onstyle', 'success');
-        $data['offstyle'] = $this->pullConfig('offstyle', 'default');
-
-        return $data;
-    }
 }
