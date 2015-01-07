@@ -4,12 +4,12 @@
 <input
         type="checkbox"
         class="form-control"
-        name="{{ field_type.getFieldName() }}"
         data-toggle="toggle"
-        data-on="{{ field_type.config.on }}"
-        data-off="{{ field_type.config.off }}"
+        name="{{ field_type.getFieldName() }}"
         data-size="{{ field_type.config.size }}"
-        data-onstyle="{{ field_type.config.on_style }}"
-        data-offstyle="{{ field_type.config.off_style }}"
+        data-on="{{ field_type.config.on_text }}"
+        data-off="{{ field_type.config.off_text }}"
+        data-onstyle="{{ field_type.config.on_class }}"
+        data-offstyle="{{ field_type.config.off_class }}"
         {{ field_type.value ? 'checked' }}
         >
