@@ -7,9 +7,9 @@
         data-toggle="toggle"
         name="{{ field_type.getFieldName() }}"
         data-size="{{ field_type.config.size }}"
-        data-on="{{ field_type.config.on_text }}"
-        data-off="{{ field_type.config.off_text }}"
-        data-onstyle="{{ field_type.config.on_class }}"
-        data-offstyle="{{ field_type.config.off_class }}"
+        data-on="{{ trans(field_type.config.on_text) }}"
+        data-off="{{ trans(field_type.config.off_text) }}"
+        data-onstyle="{{ field_type.config.on_style }}"
+        data-offstyle="{{ field_type.config.off_style }}"
         {{ field_type.value ? 'checked' }}
         >
