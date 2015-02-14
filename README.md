@@ -8,7 +8,7 @@ The boolean field type provides an on/off switch input.
 
 ## Configuration
 
-- `size` - xs, sm, default or lg
+- `size` - large, normal, small or mini
 - `on_text` - any string including translatable keys
 - `on_style` - primary, success, info, warning or danger
 - `off_text` - any string including translatable keys
@@ -20,7 +20,7 @@ overridden easily to fit alongside a different theme framework.
 #### Example
 
 	config => [
-		'size' => 'lg',
+		'size' => 'large',
 		'on_text' => 'Enabled',
 		'on_style' => 'success',
 		'off_text' => 'Disabled',

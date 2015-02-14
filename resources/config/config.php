@@ -5,10 +5,10 @@ return [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'options' => [
-                'xs',
-                'sm',
-                'default',
-                'lg'
+                'large',
+                'normal',
+                'small',
+                'mini'
             ]
         ]
     ],
