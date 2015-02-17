@@ -7,8 +7,8 @@
         data-toggle="toggle"
         name="{{ field_type.getInputName() }}"
         data-size="{{ field_type.config.size }}"
-        data-on="{{ trans(field_type.config.on_text) }}"
-        data-off="{{ trans(field_type.config.off_text) }}"
+        data-on="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
+        data-off="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
         data-onstyle="{{ field_type.config.on_style ?: 'success' }}"
         data-offstyle="{{ field_type.config.off_style ?: 'default' }}"
         {{ field_type.value ? 'checked' }}
