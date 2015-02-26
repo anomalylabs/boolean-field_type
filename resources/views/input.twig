@@ -10,6 +10,6 @@
         data-on="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
         data-off="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
         data-onstyle="{{ field_type.config.on_style ?: 'success' }}"
-        data-offstyle="{{ field_type.config.off_style ?: 'default' }}"
+        data-offstyle="{{ field_type.config.off_style ?: 'danger' }}"
         {{ field_type.value ? 'checked' }}
         >
