@@ -1,7 +1,7 @@
 {{ asset_add("styles.css", "anomaly.field_type.boolean::css/bootstrap-toggle.css") }}
 {{ asset_add("scripts.js", "anomaly.field_type.boolean::js/bootstrap-toggle.min.js") }}
 
-<div class="ui checkbox {{ field_type.config.style ?: 'toggle' }}">
+<div class="ui checkbox {{ field_type.config.type ?: 'toggle' }}">
     <input
             type="checkbox"
             name="{{ field_type.getInputName() }}"
