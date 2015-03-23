@@ -4,5 +4,5 @@
             name="{{ field_type.getInputName() }}"
             {{ field_type.value ? 'checked' }}>
 
-    <label>{{ trans(field_type.config.text ?: field_type.label)|raw }}</label>
+    <label>{{ trans(field_type.config.text ?: null)|raw }}</label>
 </div>
