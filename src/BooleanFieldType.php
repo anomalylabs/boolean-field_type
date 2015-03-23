@@ -27,17 +27,4 @@ class BooleanFieldType extends FieldType
      */
     protected $inputView = 'anomaly.field_type.boolean::input';
 
-    /**
-     * Get the config.
-     *
-     * @return array
-     */
-    public function getConfig()
-    {
-        if (!isset($this->config['text']) && ends_with($this->getLabel(), ['.name', '.label'])) {
-            $this->config['text'] = str_replace(['.name', '.label'], '.text', $this->getLabel());
-        }
-
-        return parent::getConfig();
-    }
 }
