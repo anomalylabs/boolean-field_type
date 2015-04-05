@@ -1,8 +1,15 @@
-<div class="ui checkbox {{ field_type.config.type ?: 'toggle' }}">
-    <input
-            type="checkbox"
-            name="{{ field_type.getInputName() }}"
-            {{ field_type.value ? 'checked' }}>
+{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/input.js', ['debug']) }}
 
-    <label>{{ trans(field_type.config.text ?: null)|raw }}</label>
-</div>
+<input
+        class="switch"
+        type="checkbox"
+        data-size="large"
+        data-on-text="{{ trans(field_type.config.on_text) }}"
+        data-off-text="{{ trans(field_type.config.off_text) }}"
+        data-on-color="{{ field_type.config.on_color }}"
+        data-off-color="{{ field_type.config.off_color }}"
+        data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
+        name="{{ field_type.getInputName() }}"
+        {{ field_type.value ? 'checked' }}>
+
+<label>{{ trans(field_type.config.text ?: null)|raw }}</label>
