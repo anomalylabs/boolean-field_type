@@ -33,10 +33,10 @@ class BooleanFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'on_text'   => 'anomaly.field_type.boolean::choice.yes',
-        'off_text'  => 'anomaly.field_type.boolean::choice.no',
         'on_color'  => 'success',
-        'off_color' => 'default'
+        'off_color' => 'default',
+        'on_text'   => 'anomaly.field_type.boolean::choice.yes',
+        'off_text'  => 'anomaly.field_type.boolean::choice.no'
     ];
 
 }
