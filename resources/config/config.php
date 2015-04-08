@@ -1,16 +1,8 @@
 <?php
 
 return [
-    'size'      => [
-        'type'   => 'anomaly.field_type.select',
-        'config' => [
-            'options' => [
-                'large',
-                'normal',
-                'small',
-                'mini'
-            ]
-        ]
+    'text'      => [
+        'type' => 'anomaly.field_type.text'
     ],
     'on_text'   => [
         'type' => 'anomaly.field_type.text'
@@ -19,11 +11,12 @@ return [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'options' => [
-                'primary',
-                'success',
-                'info',
-                'warning',
-                'danger'
+                'primary' => 'anomaly.field_type.boolean::config.on_style.option.primary',
+                'success' => 'anomaly.field_type.boolean::config.on_style.option.success',
+                'info'    => 'anomaly.field_type.boolean::config.on_style.option.info',
+                'warning' => 'anomaly.field_type.boolean::config.on_style.option.warning',
+                'danger'  => 'anomaly.field_type.boolean::config.on_style.option.danger',
+                'default' => 'anomaly.field_type.boolean::config.on_style.option.default'
             ]
         ]
     ],
@@ -34,11 +27,12 @@ return [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'options' => [
-                'primary',
-                'success',
-                'info',
-                'warning',
-                'danger'
+                'primary' => 'anomaly.field_type.boolean::config.off_style.option.primary',
+                'success' => 'anomaly.field_type.boolean::config.off_style.option.success',
+                'info'    => 'anomaly.field_type.boolean::config.off_style.option.info',
+                'warning' => 'anomaly.field_type.boolean::config.off_style.option.warning',
+                'danger'  => 'anomaly.field_type.boolean::config.off_style.option.danger',
+                'default' => 'anomaly.field_type.boolean::config.off_style.option.default'
             ]
         ]
     ],
