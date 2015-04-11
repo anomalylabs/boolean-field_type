@@ -10,7 +10,9 @@
             data-off-color="{{ field_type.config.off_color }}"
             data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
             name="{{ field_type.input_name }}"
-            {{ field_type.value ? 'checked' }}>
+            {{ field_type.value ? 'checked' }}
+            {{ field_type.readonly ? 'readonly' }}
+            {{ field_type.disabled ? 'disabled' }}>
 
     {% if field_type.config.text %}
         <strong style="margin-left: 10px;">{{ trans(field_type.config.text) }}</strong>
