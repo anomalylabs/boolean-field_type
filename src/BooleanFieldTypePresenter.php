@@ -21,9 +21,9 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function icon()
     {
         if ($this->object->getValue()) {
-            return '<i class="large green checkmark icon"></i>';
+            return '<i class="text-success fa fa-check fa-lg"></i>';
         } else {
-            return '<i class="large red close icon"></i>';
+            return '<i class="text-danger fa fa-close fa-lg"></i>';
         }
     }
 }
