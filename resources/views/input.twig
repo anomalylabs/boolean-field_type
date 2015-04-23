@@ -13,8 +13,4 @@
             {{ field_type.value ? 'checked' }}
             {{ field_type.readonly ? 'readonly' }}
             {{ field_type.disabled ? 'disabled' }}>
-
-    {% if field_type.config.text %}
-        <strong style="margin-left: 10px;">{{ trans(field_type.config.text) }}</strong>
-    {% endif %}
 </label>
