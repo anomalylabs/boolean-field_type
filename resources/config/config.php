@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'on_text'   => [
+    'on_text'       => [
         'type'     => 'anomaly.field_type.text',
         'required' => true
     ],
-    'on_color'  => [
+    'on_color'      => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -19,11 +19,11 @@ return [
             ]
         ]
     ],
-    'off_text'  => [
+    'off_text'      => [
         'type'     => 'anomaly.field_type.text',
         'required' => true
     ],
-    'off_color' => [
+    'off_color'     => [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'required'      => true,
@@ -37,4 +37,12 @@ return [
             ]
         ]
     ],
+    'default_value' => [
+        'type'   => 'anomaly.field_type.boolean',
+        'config' => [
+            'default_value' => false,
+            'on_text'       => 'anomaly.field_type.boolean::choice.on',
+            'off_text'      => 'anomaly.field_type.boolean::choice.off'
+        ]
+    ]
 ];

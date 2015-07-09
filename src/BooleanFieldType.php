@@ -40,14 +40,4 @@ class BooleanFieldType extends FieldType
         'off_text'      => 'anomaly.field_type.boolean::choice.no'
     ];
 
-    /**
-     * Get the post value.
-     *
-     * @param null $default
-     * @return bool
-     */
-    public function getPostValue($default = null)
-    {
-        return filter_var(parent::getPostValue($default), FILTER_VALIDATE_BOOLEAN);
-    }
 }

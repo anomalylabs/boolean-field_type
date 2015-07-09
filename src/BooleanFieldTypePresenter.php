@@ -14,7 +14,21 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
-     * Return icon HTML.
+     * Return the text value.
+     *
+     * @return string
+     */
+    public function text()
+    {
+        if ($this->object->getValue()) {
+            return trans(array_get($this->object->getConfig(), 'on_text'));
+        } else {
+            return trans(array_get($this->object->getConfig(), 'off_text'));
+        }
+    }
+
+    /**
+     * Return icon representation of the value.
      *
      * @return string
      */
