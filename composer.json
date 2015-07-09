@@ -1,15 +1,14 @@
 {
     "name": "anomaly/boolean-field_type",
     "type": "streams-addon",
-    "description": "A boolean value light switch style field type.",
+    "description": "An on/off switch style field type.",
     "keywords": [
-        "streams-addon",
-        "boolean",
-        "pyrocms",
-        "laravel"
+        "streams field type",
+        "streams addon",
+        "field type"
     ],
     "homepage": "http://anomaly.is/",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -26,11 +25,5 @@
         "psr-4": {
             "Anomaly\\BooleanFieldType\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    },
-    "minimum-stability": "dev"
+    }
 }

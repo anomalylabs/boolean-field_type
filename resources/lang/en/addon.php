@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Boolean',
-    'description' => 'A boolean value light switch style field type.'
+    'description' => 'An on/off switch style field type.'
 ];

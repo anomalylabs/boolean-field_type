@@ -1,38 +1,39 @@
 <?php
 
 return [
-    'text'      => [
-        'type' => 'anomaly.field_type.text'
-    ],
     'on_text'   => [
-        'type' => 'anomaly.field_type.text'
+        'type'     => 'anomaly.field_type.text',
+        'required' => true
     ],
-    'on_style'  => [
-        'type'   => 'anomaly.field_type.select',
-        'config' => [
-            'options' => [
-                'primary' => 'anomaly.field_type.boolean::config.on_style.option.primary',
-                'success' => 'anomaly.field_type.boolean::config.on_style.option.success',
-                'info'    => 'anomaly.field_type.boolean::config.on_style.option.info',
-                'warning' => 'anomaly.field_type.boolean::config.on_style.option.warning',
-                'danger'  => 'anomaly.field_type.boolean::config.on_style.option.danger',
-                'default' => 'anomaly.field_type.boolean::config.on_style.option.default'
+    'on_color'  => [
+        'type'     => 'anomaly.field_type.select',
+        'required' => true,
+        'config'   => [
+            'default_value' => 'success',
+            'options'       => [
+                'success' => 'anomaly.field_type.boolean::config.on_color.green',
+                'info'    => 'anomaly.field_type.boolean::config.on_color.blue',
+                'warning' => 'anomaly.field_type.boolean::config.on_color.orange',
+                'danger'  => 'anomaly.field_type.boolean::config.on_color.red',
+                'default' => 'anomaly.field_type.boolean::config.on_color.gray'
             ]
         ]
     ],
     'off_text'  => [
-        'type' => 'anomaly.field_type.text'
+        'type'     => 'anomaly.field_type.text',
+        'required' => true
     ],
-    'off_style' => [
+    'off_color' => [
         'type'   => 'anomaly.field_type.select',
         'config' => [
-            'options' => [
-                'primary' => 'anomaly.field_type.boolean::config.off_style.option.primary',
-                'success' => 'anomaly.field_type.boolean::config.off_style.option.success',
-                'info'    => 'anomaly.field_type.boolean::config.off_style.option.info',
-                'warning' => 'anomaly.field_type.boolean::config.off_style.option.warning',
-                'danger'  => 'anomaly.field_type.boolean::config.off_style.option.danger',
-                'default' => 'anomaly.field_type.boolean::config.off_style.option.default'
+            'required'      => true,
+            'default_value' => 'default',
+            'options'       => [
+                'success' => 'anomaly.field_type.boolean::config.off_color.green',
+                'info'    => 'anomaly.field_type.boolean::config.off_color.blue',
+                'warning' => 'anomaly.field_type.boolean::config.off_color.orange',
+                'danger'  => 'anomaly.field_type.boolean::config.off_color.red',
+                'default' => 'anomaly.field_type.boolean::config.off_color.gray'
             ]
         ]
     ],

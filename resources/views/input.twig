@@ -1,8 +1,9 @@
+{{ asset_add('styles.css', 'anomaly.field_type.boolean::less/bootstrap-switch.less') }}
+{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/bootstrap-switch.min.js') }}
 {{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/input.js') }}
 
 <label>
     <input
-            class="switch"
             type="checkbox"
             data-on-text="{{ trans(field_type.config.on_text) }}"
             data-off-text="{{ trans(field_type.config.off_text) }}"
