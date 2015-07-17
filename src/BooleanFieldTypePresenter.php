@@ -35,9 +35,33 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function icon()
     {
         if ($this->object->getValue()) {
-            return '<i class="text-success fa fa-check fa-lg"></i>';
+            return '<i class="text-' . $this->color() . ' fa fa-check fa-lg"></i>';
         } else {
-            return '<i class="text-danger fa fa-close fa-lg"></i>';
+            return '<i class="text-' . $this->color() . ' fa fa-close fa-lg"></i>';
         }
+    }
+
+    /**
+     * Return label representation of the value.
+     *
+     * @return string
+     */
+    public function label()
+    {
+        if ($this->object->getValue()) {
+            return '<i class="label label-' . $this->color() . '">' . $this->text() . '</i>';
+        } else {
+            return '<i class="label label-' . $this->color() . '">' . $this->text() . '</i>';
+        }
+    }
+
+    /**
+     * Return the configured color the value represents.
+     *
+     * @return string
+     */
+    public function color()
+    {
+        return array_get($this->object->getConfig(), $this->object->getValue() ? 'on_color' : 'off_color');
     }
 }
