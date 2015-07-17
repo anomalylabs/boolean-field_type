@@ -46,7 +46,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      *
      * @return string
      */
-    public function label()
+    public function badge()
     {
         if ($this->object->getValue()) {
             return '<i class="label label-' . $this->color() . '">' . $this->text() . '</i>';
