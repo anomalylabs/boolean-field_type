@@ -28,6 +28,13 @@ class BooleanFieldType extends FieldType
     protected $inputView = 'anomaly.field_type.boolean::input';
 
     /**
+     * The filter view.
+     *
+     * @var string
+     */
+    protected $filterView = 'anomaly.field_type.boolean::filter';
+
+    /**
      * The config array.
      *
      * @var array

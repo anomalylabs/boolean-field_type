@@ -1,0 +1,10 @@
+<select
+        class="form-control"
+        name="{{ field_type.input_name }}"
+        {{ field_type.disabled ? 'disabled' }}>
+
+    <option value="" {{ field_type.value == null ? 'selected' }}>{{ trans(field_type.placeholder) }}</option>
+    <option value="false" {{ field_type.value == 'false' ? 'selected' }}>{{ trans(field_type.config.off_text) }}</option>
+    <option value="true" {{ field_type.value == 'true' ? 'selected' }}>{{ trans(field_type.config.on_text) }}</option>
+
+</select>
