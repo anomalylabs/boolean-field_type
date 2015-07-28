@@ -2,8 +2,6 @@
 
 This field type returns the addon instance as a value. You may access the object as normal.
 
-**Examples:**
-
 ### `text`
 
 Return the configured on/off text value.
