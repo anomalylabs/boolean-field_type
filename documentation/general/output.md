@@ -10,7 +10,7 @@ Return the configured on/off text value.
 // Twig Usage
 {{ entry.example.text }}
 
-// API Usage
+// API usage
 $entry->example->text();
 ```
 
@@ -22,7 +22,7 @@ Return the icon representation of the value.
 // Twig Usage
 {{ entry.example.icon|raw }}
 
-// API Usage
+// API usage
 $entry->example->icon();
 ```
 
@@ -34,7 +34,7 @@ Return the label representation of the value.
 // Twig Usage
 {{ entry.example.label|raw }}
 
-// API Usage
+// API usage
 $entry->example->label();
 ```
 
@@ -46,6 +46,6 @@ Return the configured color the value represents.
 // Twig Usage
 {{ entry.example.color }}
 
-// API Usage
+// API usage
 $entry->example->color();
 ```
