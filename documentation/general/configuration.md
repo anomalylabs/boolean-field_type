@@ -23,15 +23,11 @@ The default value of the checkbox. The default value is `false`.
 
 ### `on_color`
 
-The color of the checkbox when it is enabled. The default value is `success`.  
-Options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.  
-<a href="http://getbootstrap.com/css/#buttons-options" target="_blank">View Color Examples</a>
+The color of the switch when it is in the "on" position. The default value is `success`. Valid options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.
 
 ### `off_color`
 
-The color of the checkbox when it is disabled. The default value is `danger`.  
-Options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.  
-<a href="http://getbootstrap.com/css/#buttons-options" target="_blank">View Color Examples</a>
+The color of the switch when it is in the "off" position. The default value is `danger`. Valid options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.
 
 ### `on_text`
 

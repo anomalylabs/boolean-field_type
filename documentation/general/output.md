@@ -6,7 +6,7 @@ This field type returns the addon instance as a value. You may access the object
 
 ### `text`
 
-Return the text value
+Return the configured on/off text value.
 
 ```
 // Twig Usage
@@ -18,11 +18,11 @@ $entry->example->text();
 
 ### `icon`
 
-Return label representation of the value.
+Return the icon representation of the value.
 
 ```
 // Twig Usage
-{{ entry.example.icon }}
+{{ entry.example.icon|raw }}
 
 // API Usage
 $entry->example->icon();
@@ -30,11 +30,11 @@ $entry->example->icon();
 
 ### `label`
 
-Return label representation of the value.
+Return the label representation of the value.
 
 ```
 // Twig Usage
-{{ entry.example.label }}
+{{ entry.example.label|raw }}
 
 // API Usage
 $entry->example->label();
