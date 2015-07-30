@@ -73,7 +73,7 @@ This field type returns the boolean value by default.
 
 #### `text`
 
-Return the configured on/off text value.
+Returns the configured on/off text value.
 
     // Twig Usage
     {{ entry.example.text }}
@@ -83,7 +83,7 @@ Return the configured on/off text value.
 
 #### `icon`
 
-Return the icon representation of the value.
+Returns the icon representation of the value.
 
     // Twig Usage
     {{ entry.example.icon|raw }}
@@ -93,7 +93,7 @@ Return the icon representation of the value.
 
 #### `label`
 
-Return the label representation of the value.
+Returns the label representation of the value.
 
     // Twig Usage
     {{ entry.example.label|raw }}
@@ -103,7 +103,7 @@ Return the label representation of the value.
 
 #### `color`
 
-Return the configured color the value represents.
+Returns the configured color the value represents.
 
     // Twig Usage
     {{ entry.example.color }}
