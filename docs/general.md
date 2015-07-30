@@ -16,6 +16,7 @@ The boolean field type provides an on/off style switch input.
 
 - When setting and getting the value via API the value will ALWAYS be converted to it's boolean representation.
 
+
     // Examples of true
     $entry->example = 'yes';
     $entry->example = 'y';
