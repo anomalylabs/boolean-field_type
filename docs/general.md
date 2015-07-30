@@ -32,23 +32,23 @@ The boolean field type provides an on/off style switch input.
         ]
     ];
 
-#### `default_value`
+### `default_value`
 
 The default value of the checkbox. The default value is `false`.
 
-#### `on_color`
+### `on_color`
 
 The color of the switch when it is in the "on" position. The default value is `success`. Valid options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.
 
-#### `off_color`
+### `off_color`
 
 The color of the switch when it is in the "off" position. The default value is `danger`. Valid options are `default`, `primary`, `success`, `info`, `warning`, and `danger`.
 
-#### `on_text`
+### `on_text`
 
 The text shown on the checkbox when it is enabled. It can be text or a language key. The default value is `anomaly.field_type.boolean::choice.yes`.
 
-#### `off_text`
+### `off_text`
 
 The text show on the checkbox when it is disabled. It can be text or a language key. The default value is `anomaly.field_type.boolean::choice.no`.
 
@@ -58,7 +58,7 @@ The text show on the checkbox when it is disabled. It can be text or a language 
 
 This field type returns the boolean value by default.
 
-#### `text`
+### `text`
 
 Returns the configured on/off text value.
 
@@ -68,7 +68,7 @@ Returns the configured on/off text value.
     // API usage
     $entry->example->text();
 
-#### `icon`
+### `icon`
 
 Returns the icon representation of the value.
 
@@ -78,7 +78,7 @@ Returns the icon representation of the value.
     // API usage
     $entry->example->icon();
 
-#### `label`
+### `label`
 
 Returns the label representation of the value.
 
@@ -88,7 +88,7 @@ Returns the label representation of the value.
     // API usage
     $entry->example->label();
 
-#### `color`
+### `color`
 
 Returns the configured color the value represents.
 
