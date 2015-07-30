@@ -8,7 +8,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-*anomaly.field_type.boolean*
+`anomaly.field_type.boolean`
 
 The boolean field type provides an on/off style switch input.
 
@@ -71,7 +71,7 @@ The text show on the checkbox when it is disabled. It can be text or a language 
 
 This field type returns the addon instance as a value. You may access the object as normal.
 
-#### Text
+#### `text`
 
 Return the configured on/off text value.
 
@@ -81,7 +81,7 @@ Return the configured on/off text value.
     // API usage
     $entry->example->text();
 
-#### Icon
+#### `icon`
 
 Return the icon representation of the value.
 
