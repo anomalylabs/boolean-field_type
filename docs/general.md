@@ -58,7 +58,7 @@ The text show on the checkbox when it is disabled. It can be text or a language 
 
 This field type returns the boolean value by default.
 
-### `text`
+### `text()`
 
 Returns the configured on/off text value.
 
@@ -68,7 +68,7 @@ Returns the configured on/off text value.
     // API usage
     $entry->example->text();
 
-### `icon`
+### `icon()`
 
 Returns the icon representation of the value.
 
@@ -78,7 +78,7 @@ Returns the icon representation of the value.
     // API usage
     $entry->example->icon();
 
-### `label`
+### `label()`
 
 Returns the label representation of the value.
 
@@ -88,7 +88,7 @@ Returns the label representation of the value.
     // API usage
     $entry->example->label();
 
-### `color`
+### `color()`
 
 Returns the configured color the value represents.
 
