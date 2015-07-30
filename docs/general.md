@@ -69,7 +69,7 @@ The text show on the checkbox when it is disabled. It can be text or a language 
 <a name="output"></a>
 ## Output
 
-This field type returns the addon instance as a value. You may access the object as normal.
+This field type returns the boolean value by default.
 
 #### `text`
 
