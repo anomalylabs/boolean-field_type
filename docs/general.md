@@ -105,12 +105,12 @@ Returns the configured color the value represents.
 When setting and getting the value via API the value will ALWAYS be converted to it's boolean representation.
 
 
-    // Examples of true
+    // Equates to true
     $entry->example = 'yes';
     $entry->example = 'y';
     $entry->example = true;
     
-    // Examples of false
+    // Equates to false
     $entry->example = 'no';
     $entry->example = 'n';
     $entry->example = false;
