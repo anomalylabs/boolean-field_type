@@ -59,4 +59,14 @@ class BooleanFieldType extends FieldType
     {
         return 'anomaly.field_type.boolean::' . $this->config('mode');
     }
+
+    /**
+     * Render the input.
+     *
+     * @return string
+     */
+    public function getAjaxInput()
+    {
+        return view('anomaly.field_type.boolean::ajax', ['field_type' => $this])->render();
+    }
 }
