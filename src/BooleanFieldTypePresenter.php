@@ -77,7 +77,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      *
      * @return string
      */
-    public function input()
+    public function toggle()
     {
         return $this->object->getAjaxInput();
     }

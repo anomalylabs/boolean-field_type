@@ -1,0 +1,13 @@
+{{ asset_add('styles.css', 'anomaly.field_type.boolean::less/bootstrap-switch.less') }}
+{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/bootstrap-switch.min.js') }}
+{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/icon.js') }}
+
+<span
+        data-provides="icon-switch"
+        data-entry="{{ field_type.entry.id }}"
+        data-on-icon="{{ icon_class(on_icon) }}"
+        data-off-icon="{{ icon_class(off_icon) }}"
+        data-stream="{{ field_type.entry.stream.slug }}"
+        data-namespace="{{ field_type.entry.stream.namespace }}"
+        class="cursor-pointer {{ field_type.value ? 'checked' }}"
+        data-field="{{ field_type.field }}"></span>
