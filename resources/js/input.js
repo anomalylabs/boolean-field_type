@@ -1,7 +1,7 @@
 $(function () {
 
     // Initialize switches
-    $('.boolean-field-type input').each(function () {
+    $('.boolean-field-type [data-provides="switch"]').each(function () {
         $(this).bootstrapSwitch();
     });
 });

@@ -5,8 +5,9 @@
 <label>
     <input
             type="checkbox"
-            data-on-text="{{ trans(field_type.config.on_text) }}"
-            data-off-text="{{ trans(field_type.config.off_text) }}"
+            data-provides="switch"
+            data-on-text="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.on') }}"
+            data-off-text="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.off') }}"
             data-on-color="{{ field_type.config.on_color }}"
             data-off-color="{{ field_type.config.off_color }}"
             data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
