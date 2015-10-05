@@ -77,7 +77,7 @@ class BooleanFieldType extends FieldType
      * @param $offIcon
      * @return string
      */
-    public function getIconInput($onIcon, $offIcon = '')
+    public function getIconInput($onIcon = 'check-square-alt', $offIcon = '')
     {
         return view(
             'anomaly.field_type.boolean::icon',
