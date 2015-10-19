@@ -28,9 +28,9 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function text()
     {
         if ($this->object->getValue()) {
-            return array_get($this->object->getConfig(), 'on_text');
+            return trans(array_get($this->object->getConfig(), 'on_text'));
         } else {
-            return array_get($this->object->getConfig(), 'off_text');
+            return trans(array_get($this->object->getConfig(), 'off_text'));
         }
     }
 
