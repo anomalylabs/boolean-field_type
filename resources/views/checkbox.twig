@@ -1,0 +1,10 @@
+<label>
+    <input
+            type="checkbox"
+            name="{{ field_type.input_name }}"
+            {{ field_type.value ? 'checked' }}
+            {{ field_type.readonly ? 'readonly' }}
+            {{ field_type.disabled ? 'disabled' }}>
+
+    {{ trans(field_type.config.checkbox_label) }}
+</label>

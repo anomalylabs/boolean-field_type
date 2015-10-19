@@ -14,6 +14,13 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
+     * The decorated object.
+     *
+     * @var BooleanFieldType
+     */
+    protected $object;
+
+    /**
      * Return the text value.
      *
      * @return string
@@ -63,5 +70,15 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function color()
     {
         return array_get($this->object->getConfig(), $this->object->getValue() ? 'on_color' : 'off_color');
+    }
+
+    /**
+     * Return the input for AJAX use.
+     *
+     * @return string
+     */
+    public function toggle()
+    {
+        return $this->object->getAjaxInput();
     }
 }

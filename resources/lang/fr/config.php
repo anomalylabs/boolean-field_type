@@ -9,11 +9,13 @@ return [
     'on_color'      => [
         'label'        => 'Couleur "On"',
         'instructions' => 'La couleur utilisée pour l\'état "On"',
-        'green'        => 'Vert',
-        'blue'         => 'Bleu',
-        'orange'       => 'Orange',
-        'red'          => 'Rouge',
-        'gray'         => 'Gris'
+        'option'       => [
+            'green'  => 'Vert',
+            'blue'   => 'Bleu',
+            'orange' => 'Orange',
+            'red'    => 'Rouge',
+            'gray'   => 'Gris'
+        ]
     ],
     'off_text'      => [
         'label'        => 'Texte "Off"',
@@ -23,11 +25,13 @@ return [
     'off_color'     => [
         'label'        => 'Couleur "Off"',
         'instructions' => 'La couleur utilisée pour l\'état "Off"',
-        'green'        => 'Vert',
-        'blue'         => 'Bleu',
-        'orange'       => 'Orange',
-        'red'          => 'Rouge',
-        'gray'         => 'Gris'
+        'option'       => [
+            'green'  => 'Vert',
+            'blue'   => 'Bleu',
+            'orange' => 'Orange',
+            'red'    => 'Rouge',
+            'gray'   => 'Gris'
+        ]
     ],
     'default_value' => [
         'label'        => 'Valeur par défaut',
