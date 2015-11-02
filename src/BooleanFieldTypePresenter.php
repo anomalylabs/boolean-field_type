@@ -35,7 +35,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      *
      * @return bool
      */
-    public function isOff()
+    public function isFalse()
     {
         return $this->object->getValue() === false;
     }
