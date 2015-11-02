@@ -21,6 +21,26 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     protected $object;
 
     /**
+     * Return whether the value is true.
+     *
+     * @return bool
+     */
+    public function isTrue()
+    {
+        return $this->object->getValue() === true;
+    }
+
+    /**
+     * Return whether the value is false.
+     *
+     * @return bool
+     */
+    public function isOff()
+    {
+        return $this->object->getValue() === false;
+    }
+
+    /**
      * Return the text value.
      *
      * @return string

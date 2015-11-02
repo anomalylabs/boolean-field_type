@@ -58,6 +58,26 @@ The text show on the checkbox when it is disabled. It can be text or a language 
 
 This field type returns the boolean value by default.
 
+### `isTrue()`
+
+Returns true if the value is true.
+
+    // Twig Usage
+    {{ entry.example.true }}
+
+    // API usage
+    $entry->example->isTrue();
+
+### `isOff()`
+
+Returns true if the value is false.
+
+    // Twig Usage
+    {{ entry.example.off }}
+
+    // API usage
+    $entry->example->isOff();
+
 ### `text()`
 
 Returns the configured on/off text value.
