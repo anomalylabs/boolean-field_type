@@ -80,6 +80,11 @@
     }
 }
 
+// Override overflow for webkit browsers
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .bootstrap-switch { overflow: visible !important; }
+}
+
 // `On` handler
 .bootstrap-switch-handle-on {
     border-bottom-left-radius: 30px;
