@@ -53,8 +53,8 @@ return [
         'type'   => 'anomaly.field_type.boolean',
         'config' => [
             'default_value' => false,
-            'on_text'       => 'anomaly.field_type.boolean::choice.on',
-            'off_text'      => 'anomaly.field_type.boolean::choice.off'
+            'on_text'       => 'anomaly.field_type.boolean::config.default_value.option.on',
+            'off_text'      => 'anomaly.field_type.boolean::config.default_value.option.off'
         ]
     ]
 ];

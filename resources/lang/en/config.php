@@ -46,7 +46,11 @@ return [
         ]
     ],
     'default_value'  => [
-        'label'        => 'Default Value',
-        'instructions' => 'What is the default state of the switch?'
+        'label'        => 'Default State',
+        'instructions' => 'What is the default state of the switch?',
+        'option'       => [
+            'on'  => 'ON',
+            'off' => 'OFF'
+        ]
     ]
 ];
