@@ -1,10 +1,16 @@
-<label>
-    <input
-            type="checkbox"
-            name="{{ field_type.input_name }}"
-            {{ field_type.value ? 'checked' }}
-            {{ field_type.readonly ? 'readonly' }}
-            {{ field_type.disabled ? 'disabled' }}>
+<div class="c-inputs-stacked">
 
-    {{ trans(field_type.config.checkbox_label) }}
-</label>
+    <label class="c-input c-checkbox">
+        <input
+                type="checkbox"
+                name="{{ field_type.input_name }}"
+                {{ field_type.value ? 'checked' }}
+                {{ field_type.readonly ? 'readonly' }}
+                {{ field_type.disabled ? 'disabled' }}>
+
+        <span class="c-indicator"></span>
+
+        {{ trans(field_type.config.checkbox_label) }}
+    </label>
+
+</div>
