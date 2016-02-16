@@ -53,6 +53,17 @@ class BooleanFieldType extends FieldType
     }
 
     /**
+     * Get the validation value.
+     *
+     * @param null $default
+     * @return bool
+     */
+    public function getValidationValue($default = null)
+    {
+        return $this->getPostValue() === true ?: null;
+    }
+
+    /**
      * Return the input view.
      *
      * @return string
