@@ -23,7 +23,7 @@
     display: inline-block;
     direction: ltr;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: @border-radius;
     border: 1px solid;
     border-color: #cccccc;
     position: relative;
@@ -44,7 +44,7 @@
 .bootstrap-switch .bootstrap-switch-container {
     display: inline-block;
     top: 0;
-    border-radius: 4px;
+    border-radius: @border-radius;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
@@ -115,13 +115,13 @@
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    border-bottom-left-radius: @border-radius;
+    border-top-left-radius: @border-radius;
 }
 
 .bootstrap-switch .bootstrap-switch-handle-off {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: @border-radius;
+    border-top-right-radius: @border-radius;
 }
 
 .bootstrap-switch input[type='radio'],
@@ -188,15 +188,15 @@
 .bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-on {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: @border-radius;
+    border-top-right-radius: @border-radius;
 }
 
 .bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-off {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    border-bottom-left-radius: @border-radius;
+    border-top-left-radius: @border-radius;
 }
 
 .bootstrap-switch.bootstrap-switch-focused {
@@ -208,14 +208,14 @@
 
 .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label,
 .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: @border-radius;
+    border-top-right-radius: @border-radius;
 }
 
 .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
 .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    border-bottom-left-radius: @border-radius;
+    border-top-left-radius: @border-radius;
 }
 
 // Contextual Variations
