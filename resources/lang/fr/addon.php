@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'name'        => 'Booléen',
-    'description' => 'Type de champs pour un choix booléen On/Off ou Oui/Non'
+    'title'       => 'Booléen',
+    'name'        => 'Type de champs Booléen',
+    'description' => 'Type de champs proposant un choix On / Off'
 ];
