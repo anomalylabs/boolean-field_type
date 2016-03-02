@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'name'        => 'Boolean',
+    'title'       => 'Boolean',
+    'name'        => 'Boolean Field Type',
     'description' => 'An on/off switch style field type.'
 ];
