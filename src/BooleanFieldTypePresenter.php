@@ -41,20 +41,6 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return the text value.
-     *
-     * @return string
-     */
-    public function text()
-    {
-        if ($this->object->getValue()) {
-            return trans(array_get($this->object->getConfig(), 'on_text'));
-        } else {
-            return trans(array_get($this->object->getConfig(), 'off_text'));
-        }
-    }
-
-    /**
      * Return icon representation of the value.
      *
      * @return string
@@ -66,6 +52,16 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
         } else {
             return '<i class="text-' . $this->color() . ' fa fa-close fa-lg"></i>';
         }
+    }
+
+    /**
+     * Return the configured color the value represents.
+     *
+     * @return string
+     */
+    public function color()
+    {
+        return array_get($this->object->getConfig(), $this->object->getValue() ? 'on_color' : 'off_color');
     }
 
     /**
@@ -83,13 +79,17 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return the configured color the value represents.
+     * Return the text value.
      *
      * @return string
      */
-    public function color()
+    public function text()
     {
-        return array_get($this->object->getConfig(), $this->object->getValue() ? 'on_color' : 'off_color');
+        if ($this->object->getValue()) {
+            return trans(array_get($this->object->getConfig(), 'on_text'));
+        } else {
+            return trans(array_get($this->object->getConfig(), 'off_text'));
+        }
     }
 
     /**

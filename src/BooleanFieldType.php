@@ -42,17 +42,6 @@ class BooleanFieldType extends FieldType
     ];
 
     /**
-     * Get the post value.
-     *
-     * @param null $default
-     * @return bool
-     */
-    public function getPostValue($default = null)
-    {
-        return filter_var(parent::getPostValue($default), FILTER_VALIDATE_BOOLEAN);
-    }
-
-    /**
      * Get the validation value.
      *
      * @param null $default
@@ -61,6 +50,17 @@ class BooleanFieldType extends FieldType
     public function getValidationValue($default = null)
     {
         return $this->getPostValue() === true ?: null;
+    }
+
+    /**
+     * Get the post value.
+     *
+     * @param null $default
+     * @return bool
+     */
+    public function getPostValue($default = null)
+    {
+        return filter_var(parent::getPostValue($default), FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
