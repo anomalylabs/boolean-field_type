@@ -1,14 +1,26 @@
 <?php
 
 return [
-    'on_text'       => [
-        'label'        => 'Texte pour "On"',
-        'instructions' => 'Le texte utilisé pour l\'état "On"',
+    'mode'           => [
+        'label'        => 'Mode',
+        'instructions' => 'Quel type de choix souhaitez-vous afficher ?',
+        'option'       => [
+            'switch'   => 'On / Off (switch)',
+            'checkbox' => 'Case à cocher (checkbox)'
+        ]
+    ],
+    'checkbox_label' => [
+        'label'        => 'Titre de la checkbox',
+        'instructions' => 'Choisissez le titre de la checkbox si utilisée.'
+    ],
+    'on_text'        => [
+        'label'        => 'Texte "On"',
+        'instructions' => 'Texte pour le choix "On" lorsque le switch est utilisé.',
         'placeholder'  => 'On'
     ],
-    'on_color'      => [
+    'on_color'       => [
         'label'        => 'Couleur "On"',
-        'instructions' => 'La couleur utilisée pour l\'état "On"',
+        'instructions' => 'Couleur pour le choix "On" lorsque le switch est utilisé.',
         'option'       => [
             'green'  => 'Vert',
             'blue'   => 'Bleu',
@@ -17,14 +29,14 @@ return [
             'gray'   => 'Gris'
         ]
     ],
-    'off_text'      => [
+    'off_text'       => [
         'label'        => 'Texte "Off"',
-        'instructions' => 'Le texte utilisé pour l\'état "Off"',
+        'instructions' => 'Texte pour le choix "Off" lorsque le switch est utilisé.',
         'placeholder'  => 'Off'
     ],
-    'off_color'     => [
+    'off_color'      => [
         'label'        => 'Couleur "Off"',
-        'instructions' => 'La couleur utilisée pour l\'état "Off"',
+        'instructions' => 'Couleur pour le choix "Off" lorsque le switch est utilisé.',
         'option'       => [
             'green'  => 'Vert',
             'blue'   => 'Bleu',
@@ -33,8 +45,12 @@ return [
             'gray'   => 'Gris'
         ]
     ],
-    'default_value' => [
-        'label'        => 'Valeur par défaut',
-        'instructions' => 'Quel est l\'état par défaut de l\'interrupteur ?'
+    'default_value'  => [
+        'label'        => 'Etat par défaut',
+        'instructions' => 'Quel est la valeur par défaut pour le switch ?',
+        'option'       => [
+            'on'  => 'ON',
+            'off' => 'OFF'
+        ]
     ]
 ];
