@@ -3,7 +3,7 @@
 - [Setting Values](#mutator)
 - [Basic Output](#output)
 - [Presenter Output](#presenter)
-- [Ajax Input](#ajax)
+- [Displaying An Ajax Toggle](#ajax)
 
 <hr>
 
@@ -100,7 +100,7 @@ protected $columns = [
 <hr>
 
 <a name="ajax"></a>
-## Ajax Input
+## Displaying An Ajax Toggle
 
 You can return an ajax input to display a working toggle anywhere.
 
