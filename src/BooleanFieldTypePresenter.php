@@ -21,13 +21,24 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     protected $object;
 
     /**
+     * Return if the value is true / false.
+     *
+     * @param $test
+     * @return bool
+     */
+    public function is($test)
+    {
+        return $this->object->getValue() === filter_var($test, FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
      * Return whether the value is true.
      *
      * @return bool
      */
     public function isTrue()
     {
-        return $this->object->getValue() === true;
+        return $this->is(true);
     }
 
     /**
@@ -37,20 +48,21 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      */
     public function isFalse()
     {
-        return $this->object->getValue() === false;
+        return $this->is(false);
     }
 
     /**
      * Return icon representation of the value.
      *
+     * @param string $size
      * @return string
      */
-    public function icon()
+    public function icon($size = 'lg')
     {
         if ($this->object->getValue()) {
-            return '<i class="text-' . $this->color() . ' fa fa-check fa-lg"></i>';
+            return '<i class="text-' . $this->color() . ' fa fa-check fa-' . $size . '"></i>';
         } else {
-            return '<i class="text-' . $this->color() . ' fa fa-close fa-lg"></i>';
+            return '<i class="text-' . $this->color() . ' fa fa-close fa-' . $size . '"></i>';
         }
     }
 
@@ -61,7 +73,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      */
     public function color()
     {
-        return array_get($this->object->getConfig(), $this->object->getValue() ? 'on_color' : 'off_color');
+        return $this->object->config($this->object->getValue() ? 'on_color' : 'off_color');
     }
 
     /**
@@ -81,15 +93,23 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the text value.
      *
+     * @param null $on
+     * @param null $off
      * @return string
      */
-    public function text()
+    public function text($on = null, $off = null)
     {
-        if ($this->object->getValue()) {
-            return trans(array_get($this->object->getConfig(), 'on_text'));
-        } else {
-            return trans(array_get($this->object->getConfig(), 'off_text'));
+        $config = $this->object->getValue() ? 'on_text' : 'off_text';
+
+        if ($on && $config == 'on_text') {
+            return $on;
         }
+
+        if ($off && $config == 'off_text') {
+            return $off;
+        }
+
+        return $this->object->config($config);
     }
 
     /**
