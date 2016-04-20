@@ -46,7 +46,7 @@ You can return whether the value is true / false by using the `is` method.
 $entry->example->is(true); // true or false
 {% endcode %}
 
-There are also a couple shortcut methods you can use isntead.
+There are also a couple shortcut methods you can use instead.
 
 {% code php %}
 $entry->example->isTrue(); // true or false
