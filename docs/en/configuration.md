@@ -68,5 +68,3 @@ Specify the text of the switch when in the "OFF" position. Any string may be use
 {{ code('php', '"mode" => "switch"') }}
 
 Specify the type of input to display. Valid options are `switch` and `checkbox`.
-
-**Note:** When using the checkbox input mode, the placeholder will be used for the checkbox label.

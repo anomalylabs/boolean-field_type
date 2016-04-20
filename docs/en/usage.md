@@ -87,7 +87,9 @@ You can also define optional `true` and `false` overrides.
 $entry->example->text("Yep", "Nope"); // "Yep"
 {% endcode %}
 
-**Remember:** You can access presenter in valuated strings like table columns too.
+<div class="">
+<strong>Remember:</strong> You can access presenter in valuated strings like table columns too.
+</div>
 
 <pre>
 {% code php %}
