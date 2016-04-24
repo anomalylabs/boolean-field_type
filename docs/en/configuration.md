@@ -7,7 +7,6 @@
 
 Below is the full configuration available with defaults.
 
-    {% code php %}
     protected $fields = [
         "example" => [
             "type"   => "anomaly.field_type.boolean",
@@ -21,7 +20,6 @@ Below is the full configuration available with defaults.
             ]
         ]
     ];
-    {% endcode %}
 
 <hr>
 
@@ -30,31 +28,31 @@ Below is the full configuration available with defaults.
 
 ### Default Value
 
-{{ code('php', '"default_type" => false') }}
+    "default_type" => false
 
 The `default_value` is a core option. This field type accepts a boolean value or a filterable string like "yes" or "no".
 
 ### "ON" Color
 
-{{ code('php', '"on_color" => "success"') }}
+    "on_color" => "success"
 
 Specify the color of the switch when in the "ON" position. Valid options are `success`, `info`, `warning`, `danger`, `default`, and `primary`.
 
 ### "OFF" Color
 
-{{ code('php', '"on_color" => "danger"') }}
+    "on_color" => "danger"
 
 Specify the color of the switch when in the "OFF" position. Valid options are `success`, `info`, `warning`, `danger`, `default`, and `primary`.
 
 ### "ON" Text
 
-{{ code('php', '"on_text" => "ON"') }}
+    "on_text" => "ON"
 
 Specify the text of the switch when in the "ON" position. Any string may be used.
 
 ### "OFF" Text
 
-{{ code('php', '"on_text" => "OFF"') }}
+    "on_text" => "OFF"
 
 Specify the text of the switch when in the "OFF" position. Any string may be used.
 
@@ -65,6 +63,6 @@ Specify the text of the switch when in the "OFF" position. Any string may be use
 
 ### Input Mode
 
-{{ code('php', '"mode" => "switch"') }}
+    "mode" => "switch"
 
 Specify the type of input to display. Valid options are `switch` and `checkbox`.

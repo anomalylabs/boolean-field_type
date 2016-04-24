@@ -12,13 +12,11 @@
 
 You can set the boolean field type value with a boolean value.
 
-{{ code('php', '$entry->example = true') }}
+    $entry->example = true
 
 You can also set the value with a boolean filterable string.
 
-{% code php %}
-$entry->example = "yes";
-{% endcode %}
+    $entry->example = "yes";
 
 <hr>
 
@@ -27,9 +25,7 @@ $entry->example = "yes";
 
 The addon field type always returns a boolean value.
 
-{% code php %}
-$entry->example; // true or false
-{% endcode %}
+    $entry->example; // true or false
 
 <hr>
 
@@ -42,16 +38,12 @@ When accessing the value from a decorated entry, like one in a view, the boolean
 
 You can return whether the value is true / false by using the `is` method.
 
-{% code php %}
-$entry->example->is(true); // true or false
-{% endcode %}
+    $entry->example->is(true); // true or false
 
 There are also a couple shortcut methods you can use instead.
 
-{% code php %}
-$entry->example->isTrue(); // true or false
-$entry->example->isFalse(); // true or false
-{% endcode %}
+    $entry->example->isTrue(); // true or false
+    $entry->example->isFalse(); // true or false
 
 ### Displaying symbolic output
 
@@ -61,43 +53,31 @@ You can easily display symbolic output like labels and icons that work great for
 
 To display a FontAwesome icon, use the `icon` method. You can also include an optional size argument.
 
-{% code php %}
-$entry->example->icon('lg');
-{% endcode %}
+    $entry->example->icon();
 
 #### Color
 
 The `color` method returns the configured state color based on the value.
 
-{% code php %}
-$entry->example->color(); // "success"
-{% endcode %}
+    $entry->example->color(); // success
 
 #### Text
 
 To return the configured state text based on the value, use the `text` method.
 
-{% code php %}
-$entry->example->text(); // "ON"
-{% endcode %}
+    $entry->example->text(); // ON
 
 You can also define optional `true` and `false` overrides.
 
-{% code php %}
-$entry->example->text("Yep", "Nope"); // "Yep"
-{% endcode %}
+    $entry->example->text("Yep", "Nope"); // Yep
 
 <div class="alert alert-info">
 <strong>Remember:</strong> You can access presenter methods in valuated strings like table columns too.
 </div>
 
-<pre>
-{% code php %}
-protected $columns = [
-    'entry.example.label'
-];
-{% endcode %}
-</pre>
+    protected $columns = [
+        'entry.example.label'
+    ];
 
 <hr>
 
@@ -106,16 +86,10 @@ protected $columns = [
 
 You can return an ajax input to display a working toggle anywhere.
 
-{% code php %}
-$entry->example->getAjaxInput();
-{% endcode %}
+    $entry->example->getAjaxInput();
 
 You can also display the toggle in your table as a column value.
 
-<pre>
-{% code php %}
-protected $columns = [
-    'entry.example.toggle'
-];
-{% endcode %}
-</pre>
+    protected $columns = [
+        'entry.example.toggle'
+    ];
