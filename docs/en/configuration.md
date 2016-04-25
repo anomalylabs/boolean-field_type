@@ -28,7 +28,7 @@ Below is the full configuration available with defaults.
 
 ### Default Value
 
-    "default_type" => false
+    "default_value" => false
 
 The `default_value` is a core option. This field type accepts a boolean value or a filterable string like "yes" or "no".
 
