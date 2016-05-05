@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'mode'           => [
+    'mode'          => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -12,13 +12,13 @@ return [
             ]
         ]
     ],
-    'checkbox_label' => [
+    'label'         => [
         'type' => 'anomaly.field_type.text'
     ],
-    'on_text'        => [
+    'on_text'       => [
         'type' => 'anomaly.field_type.text'
     ],
-    'on_color'       => [
+    'on_color'      => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -32,10 +32,10 @@ return [
             ]
         ]
     ],
-    'off_text'       => [
+    'off_text'      => [
         'type' => 'anomaly.field_type.text'
     ],
-    'off_color'      => [
+    'off_color'     => [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
@@ -49,7 +49,7 @@ return [
             ]
         ]
     ],
-    'default_value'  => [
+    'default_value' => [
         'type'   => 'anomaly.field_type.boolean',
         'config' => [
             'default_value' => false,

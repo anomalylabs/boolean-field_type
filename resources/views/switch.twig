@@ -15,4 +15,6 @@
             {{ html_attributes(field_type.attributes) }}
             {{ field_type.disabled ? 'disabled' }}
             {{ field_type.readonly ? 'readonly' }}>
+
+    {{ trans(field_type.config.label) }}
 </label>

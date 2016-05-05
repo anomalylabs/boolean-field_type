@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'mode'           => [
+    'mode'          => [
         'label'        => 'Mode',
         'instructions' => 'Quel type de choix souhaitez-vous afficher ?',
         'option'       => [
@@ -9,16 +9,16 @@ return [
             'checkbox' => 'Case à cocher (checkbox)'
         ]
     ],
-    'checkbox_label' => [
-        'label'        => 'Titre de la checkbox',
-        'instructions' => 'Choisissez le titre de la checkbox si utilisée.'
+    'label'         => [
+        'label'        => 'Choice Label',
+        'instructions' => 'This label is displayed right next to the input.'
     ],
-    'on_text'        => [
+    'on_text'       => [
         'label'        => 'Texte "On"',
         'instructions' => 'Texte pour le choix "On" lorsque le switch est utilisé.',
         'placeholder'  => 'On'
     ],
-    'on_color'       => [
+    'on_color'      => [
         'label'        => 'Couleur "On"',
         'instructions' => 'Couleur pour le choix "On" lorsque le switch est utilisé.',
         'option'       => [
@@ -29,12 +29,12 @@ return [
             'gray'   => 'Gris'
         ]
     ],
-    'off_text'       => [
+    'off_text'      => [
         'label'        => 'Texte "Off"',
         'instructions' => 'Texte pour le choix "Off" lorsque le switch est utilisé.',
         'placeholder'  => 'Off'
     ],
-    'off_color'      => [
+    'off_color'     => [
         'label'        => 'Couleur "Off"',
         'instructions' => 'Couleur pour le choix "Off" lorsque le switch est utilisé.',
         'option'       => [
@@ -45,7 +45,7 @@ return [
             'gray'   => 'Gris'
         ]
     ],
-    'default_value'  => [
+    'default_value' => [
         'label'        => 'Etat par défaut',
         'instructions' => 'Quel est la valeur par défaut pour le switch ?',
         'option'       => [

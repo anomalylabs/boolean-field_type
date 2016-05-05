@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'mode'           => [
+    'mode'          => [
         'label'        => 'Mode',
         'instructions' => 'What kind of input would you like to display?',
         'option'       => [
@@ -9,16 +9,16 @@ return [
             'checkbox' => 'Checkbox'
         ]
     ],
-    'checkbox_label' => [
-        'label'        => 'Checkbox Label',
-        'instructions' => 'Define the checkbox label if using the checkbox mode.'
+    'label'         => [
+        'label'        => 'Choice Label',
+        'instructions' => 'This label is displayed right next to the input.'
     ],
-    'on_text'        => [
+    'on_text'       => [
         'label'        => '"On" Text',
         'instructions' => 'This text will be used for the switch\'s "on" state.',
         'placeholder'  => 'On'
     ],
-    'on_color'       => [
+    'on_color'      => [
         'label'        => '"On" Color',
         'instructions' => 'This color will be used for the switch\'s "on" state.',
         'option'       => [
@@ -29,12 +29,12 @@ return [
             'gray'   => 'Gray'
         ]
     ],
-    'off_text'       => [
+    'off_text'      => [
         'label'        => '"Off" Text',
         'instructions' => 'This text will be used for the switch\'s "off" state.',
         'placeholder'  => 'Off'
     ],
-    'off_color'      => [
+    'off_color'     => [
         'label'        => '"Off" Color',
         'instructions' => 'This color will be used for the switch\'s "off" state.',
         'option'       => [
@@ -45,7 +45,7 @@ return [
             'gray'   => 'Gray'
         ]
     ],
-    'default_value'  => [
+    'default_value' => [
         'label'        => 'Default State',
         'instructions' => 'What is the default state of the switch?',
         'option'       => [
