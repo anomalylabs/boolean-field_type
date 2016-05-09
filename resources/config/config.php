@@ -5,10 +5,12 @@ return [
         'type'     => 'anomaly.field_type.select',
         'required' => true,
         'config'   => [
-            'default_value' => 'switch',
+            'default_value' => config('anomaly.field_type.boolean::input.mode', 'switch'),
             'options'       => [
                 'switch'   => 'anomaly.field_type.boolean::config.mode.option.switch',
-                'checkbox' => 'anomaly.field_type.boolean::config.mode.option.checkbox'
+                'checkbox' => 'anomaly.field_type.boolean::config.mode.option.checkbox',
+                'dropdown' => 'anomaly.field_type.boolean::config.mode.option.dropdown',
+                'radio'    => 'anomaly.field_type.boolean::config.mode.option.radio'
             ]
         ]
     ],

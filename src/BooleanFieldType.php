@@ -34,7 +34,6 @@ class BooleanFieldType extends FieldType
      */
     protected $config = [
         'default_value' => false,
-        'mode'          => 'switch',
         'on_color'      => 'success',
         'off_color'     => 'danger',
         'on_text'       => 'YES',
@@ -70,7 +69,17 @@ class BooleanFieldType extends FieldType
      */
     public function getInputView()
     {
-        return 'anomaly.field_type.boolean::' . $this->config('mode');
+        return 'anomaly.field_type.boolean::' . $this->mode();
+    }
+
+    /**
+     * Return the input mode.
+     *
+     * @return string
+     */
+    public function mode()
+    {
+        return $this->config('mode') ?: config('anomaly.field_type.boolean::input.mode', 'switch');
     }
 
     /**

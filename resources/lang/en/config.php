@@ -6,7 +6,9 @@ return [
         'instructions' => 'What kind of input would you like to display?',
         'option'       => [
             'switch'   => 'Switch',
-            'checkbox' => 'Checkbox'
+            'checkbox' => 'Checkbox',
+            'dropdown' => 'Dropdown',
+            'radio'    => 'Radio Buttons'
         ]
     ],
     'label'         => [

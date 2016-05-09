@@ -16,7 +16,7 @@ Below is the full configuration available with defaults.
                 "off_color"     => "danger",
                 "on_text"       => "YES",
                 "off_text"      => "NO",
-                "mode"          => "switch"
+                "mode"          => null
             ]
         ]
     ];
@@ -65,4 +65,4 @@ Specify the text of the switch when in the "OFF" position. Any string may be use
 
     "mode" => "switch"
 
-Specify the type of input to display. Valid options are `switch` and `checkbox`.
+Specify the type of input to display. Valid options are `switch`, `checkbox`, `dropdown` or `radio`. If no value is provided the `anomaly.field_type.boolean::input.mode` value will be used by default.
