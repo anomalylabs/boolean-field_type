@@ -8,17 +8,17 @@ return [
             'switch'   => 'Switch',
             'checkbox' => 'Checkbox',
             'dropdown' => 'Dropdown',
-            'radio'    => 'Radio Buttons'
-        ]
+            'radio'    => 'Radio Buttons',
+        ],
     ],
     'label'         => [
         'label'        => 'Choice Label',
-        'instructions' => 'This label is displayed right next to the input.'
+        'instructions' => 'This label is displayed right next to the input.',
     ],
     'on_text'       => [
         'label'        => '"On" Text',
         'instructions' => 'This text will be used for the switch\'s "on" state.',
-        'placeholder'  => 'On'
+        'placeholder'  => 'On',
     ],
     'on_color'      => [
         'label'        => '"On" Color',
@@ -28,13 +28,13 @@ return [
             'blue'   => 'Blue',
             'orange' => 'Orange',
             'red'    => 'Red',
-            'gray'   => 'Gray'
-        ]
+            'gray'   => 'Gray',
+        ],
     ],
     'off_text'      => [
         'label'        => '"Off" Text',
         'instructions' => 'This text will be used for the switch\'s "off" state.',
-        'placeholder'  => 'Off'
+        'placeholder'  => 'Off',
     ],
     'off_color'     => [
         'label'        => '"Off" Color',
@@ -44,15 +44,15 @@ return [
             'blue'   => 'Blue',
             'orange' => 'Orange',
             'red'    => 'Red',
-            'gray'   => 'Gray'
-        ]
+            'gray'   => 'Gray',
+        ],
     ],
     'default_value' => [
         'label'        => 'Default State',
         'instructions' => 'What is the default state of the switch?',
         'option'       => [
             'on'  => 'ON',
-            'off' => 'OFF'
-        ]
-    ]
+            'off' => 'OFF',
+        ],
+    ],
 ];

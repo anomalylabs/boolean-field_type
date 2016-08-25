@@ -11,7 +11,6 @@ use Illuminate\Contracts\Container\Container;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\BooleanFieldType\Http\Controller
  */
 class BooleanController extends PublicController
 {
@@ -19,14 +18,14 @@ class BooleanController extends PublicController
     /**
      * Toggle the boolean value.
      *
-     * @param StreamRepositoryInterface $streams
-     * @param Container $container
+     * @param  StreamRepositoryInterface $streams
+     * @param  Container                 $container
      * @throws \Exception
      */
     public function toggle(StreamRepositoryInterface $streams, Container $container)
     {
 
-        /**
+        /*
          * First fine the stream by
          * it's slug and namespace.
          */
@@ -38,7 +37,7 @@ class BooleanController extends PublicController
             throw new \Exception("Stream not found with slug [{$slug}] in namespace [{$namespace}].");
         }
 
-        /**
+        /*
          * Grab the model from the stream.
          */
         $model = $stream->getEntryModel();
@@ -46,13 +45,13 @@ class BooleanController extends PublicController
         /* @var EntryRepositoryInterface $repository */
         $repository = $container->make(EntryRepositoryInterface::class);
 
-        /**
+        /*
          * Set the model manually since
          * it's a generic repository.
          */
         $repository->setModel($model);
 
-        /**
+        /*
          * Try finding the entry with
          * our generic repository.
          */
@@ -60,13 +59,13 @@ class BooleanController extends PublicController
             throw new \Exception("Entry [{$id}] not found in stream [{$slug}] in namespace [{$namespace}].");
         }
 
-        /**
+        /*
          * Make the request change to the entry
          * based on the state submitted.
          */
         $entry->{$this->request->get('field')} = $this->request->get('state');
 
-        /**
+        /*
          * Save and don't return a thing.
          */
         $repository->save($entry);

@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\BooleanFieldType
  */
 class BooleanFieldType extends FieldType
 {
@@ -37,13 +36,13 @@ class BooleanFieldType extends FieldType
         'on_color'      => 'success',
         'off_color'     => 'danger',
         'on_text'       => 'YES',
-        'off_text'      => 'NO'
+        'off_text'      => 'NO',
     ];
 
     /**
      * Get the validation value.
      *
-     * @param null $default
+     * @param  null $default
      * @return bool
      */
     public function getValidationValue($default = null)
@@ -54,7 +53,7 @@ class BooleanFieldType extends FieldType
     /**
      * Get the post value.
      *
-     * @param null $default
+     * @param  null $default
      * @return bool
      */
     public function getPostValue($default = null)
@@ -106,7 +105,7 @@ class BooleanFieldType extends FieldType
             [
                 'field_type' => $this,
                 'on_icon'    => $onIcon,
-                'off_icon'   => $offIcon
+                'off_icon'   => $offIcon,
             ]
         )->render();
     }

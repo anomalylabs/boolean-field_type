@@ -10,6 +10,6 @@ return [
     | When no input mode is specified, the following mode will be used.
     |
     */
-    'mode' => 'switch'
+    'mode' => 'switch',
 
 ];

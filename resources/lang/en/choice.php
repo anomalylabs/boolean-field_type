@@ -1,5 +1,5 @@
 <?php
 return [
     'yes' => 'Yes',
-    'no'  => 'No'
+    'no'  => 'No',
 ];

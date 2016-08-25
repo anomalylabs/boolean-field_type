@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\BooleanFieldType
  */
 class BooleanFieldTypePresenter extends FieldTypePresenter
 {
@@ -54,7 +53,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     /**
      * Return icon representation of the value.
      *
-     * @param string $size
+     * @param  string $size
      * @return string
      */
     public function icon($size = 'lg')
@@ -93,8 +92,8 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the text value.
      *
-     * @param null $on
-     * @param null $off
+     * @param  null   $on
+     * @param  null   $off
      * @return string
      */
     public function text($on = null, $off = null)

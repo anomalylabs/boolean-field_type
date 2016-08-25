@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Builder;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\BooleanFieldType
  */
 class BooleanFieldTypeQuery extends FieldTypeQuery
 {
@@ -19,7 +18,7 @@ class BooleanFieldTypeQuery extends FieldTypeQuery
      * Filter a query by the value of a
      * field using this field type.
      *
-     * @param Builder $query
+     * @param Builder         $query
      * @param FilterInterface $filter
      */
     public function filter(Builder $query, FilterInterface $filter)

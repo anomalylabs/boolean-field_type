@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\BooleanFieldType
  */
 class BooleanFieldTypeServiceProvider extends AddonServiceProvider
 {
@@ -19,7 +18,7 @@ class BooleanFieldTypeServiceProvider extends AddonServiceProvider
      * @var array
      */
     protected $routes = [
-        'streams/boolean-field_type/toggle' => 'Anomaly\BooleanFieldType\Http\Controller\BooleanController@toggle'
+        'streams/boolean-field_type/toggle' => 'Anomaly\BooleanFieldType\Http\Controller\BooleanController@toggle',
     ];
 
 }
