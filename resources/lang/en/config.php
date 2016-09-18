@@ -18,7 +18,7 @@ return [
     'on_text'       => [
         'label'        => '"On" Text',
         'instructions' => 'This text will be used for the switch\'s "on" state.',
-        'placeholder'  => 'On',
+        'placeholder'  => 'YES',
     ],
     'on_color'      => [
         'label'        => '"On" Color',
@@ -34,7 +34,7 @@ return [
     'off_text'      => [
         'label'        => '"Off" Text',
         'instructions' => 'This text will be used for the switch\'s "off" state.',
-        'placeholder'  => 'Off',
+        'placeholder'  => 'NO',
     ],
     'off_color'     => [
         'label'        => '"Off" Color',
