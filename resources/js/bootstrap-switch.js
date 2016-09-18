@@ -19,13 +19,13 @@
  * ========================================================================
  */
 
-(function() {
+(function () {
     var slice = [].slice;
 
-    (function($, window) {
+    (function ($, window) {
         "use strict";
         var BootstrapSwitch;
-        BootstrapSwitch = (function() {
+        BootstrapSwitch = (function () {
             function BootstrapSwitch(element, options) {
                 if (options == null) {
                     options = {};
@@ -52,8 +52,8 @@
                 }, options);
                 this.prevOptions = {};
                 this.$wrapper = $("<div>", {
-                    "class": (function(_this) {
-                        return function() {
+                    "class": (function (_this) {
+                        return function () {
                             var classes;
                             classes = ["" + _this.options.baseClass].concat(_this._getClasses(_this.options.wrapperClass));
                             classes.push(_this.options.state ? _this.options.baseClass + "-on" : _this.options.baseClass + "-off");
@@ -94,13 +94,13 @@
                     html: this.options.labelText,
                     "class": this.options.baseClass + "-label"
                 });
-                this.$element.on("init.bootstrapSwitch", (function(_this) {
-                    return function() {
+                this.$element.on("init.bootstrapSwitch", (function (_this) {
+                    return function () {
                         return _this.options.onInit.apply(element, arguments);
                     };
                 })(this));
-                this.$element.on("switchChange.bootstrapSwitch", (function(_this) {
-                    return function(e) {
+                this.$element.on("switchChange.bootstrapSwitch", (function (_this) {
+                    return function (e) {
                         if (false === _this.options.onSwitchChange.apply(element, arguments)) {
                             if (_this.$element.is(":radio")) {
                                 return $("[name='" + (_this.$element.attr('name')) + "']").trigger("previousState.bootstrapSwitch", true);
@@ -127,11 +127,11 @@
 
             BootstrapSwitch.prototype._constructor = BootstrapSwitch;
 
-            BootstrapSwitch.prototype.setPrevOptions = function() {
+            BootstrapSwitch.prototype.setPrevOptions = function () {
                 return this.prevOptions = $.extend(true, {}, this.options);
             };
 
-            BootstrapSwitch.prototype.state = function(value, skip) {
+            BootstrapSwitch.prototype.state = function (value, skip) {
                 if (typeof value === "undefined") {
                     return this.options.state;
                 }
@@ -154,7 +154,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.toggleState = function(skip) {
+            BootstrapSwitch.prototype.toggleState = function (skip) {
                 if (this.options.disabled || this.options.readonly) {
                     return this.$element;
                 }
@@ -166,7 +166,7 @@
                 }
             };
 
-            BootstrapSwitch.prototype.size = function(value) {
+            BootstrapSwitch.prototype.size = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.size;
                 }
@@ -182,7 +182,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.animate = function(value) {
+            BootstrapSwitch.prototype.animate = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.animate;
                 }
@@ -193,13 +193,13 @@
                 return this.toggleAnimate();
             };
 
-            BootstrapSwitch.prototype.toggleAnimate = function() {
+            BootstrapSwitch.prototype.toggleAnimate = function () {
                 this.options.animate = !this.options.animate;
                 this.$wrapper.toggleClass(this.options.baseClass + "-animate");
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.disabled = function(value) {
+            BootstrapSwitch.prototype.disabled = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.disabled;
                 }
@@ -210,14 +210,14 @@
                 return this.toggleDisabled();
             };
 
-            BootstrapSwitch.prototype.toggleDisabled = function() {
+            BootstrapSwitch.prototype.toggleDisabled = function () {
                 this.options.disabled = !this.options.disabled;
                 this.$element.prop("disabled", this.options.disabled);
                 this.$wrapper.toggleClass(this.options.baseClass + "-disabled");
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.readonly = function(value) {
+            BootstrapSwitch.prototype.readonly = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.readonly;
                 }
@@ -228,14 +228,14 @@
                 return this.toggleReadonly();
             };
 
-            BootstrapSwitch.prototype.toggleReadonly = function() {
+            BootstrapSwitch.prototype.toggleReadonly = function () {
                 this.options.readonly = !this.options.readonly;
                 this.$element.prop("readonly", this.options.readonly);
                 this.$wrapper.toggleClass(this.options.baseClass + "-readonly");
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.indeterminate = function(value) {
+            BootstrapSwitch.prototype.indeterminate = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.indeterminate;
                 }
@@ -246,7 +246,7 @@
                 return this.toggleIndeterminate();
             };
 
-            BootstrapSwitch.prototype.toggleIndeterminate = function() {
+            BootstrapSwitch.prototype.toggleIndeterminate = function () {
                 this.options.indeterminate = !this.options.indeterminate;
                 this.$element.prop("indeterminate", this.options.indeterminate);
                 this.$wrapper.toggleClass(this.options.baseClass + "-indeterminate");
@@ -254,7 +254,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.inverse = function(value) {
+            BootstrapSwitch.prototype.inverse = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.inverse;
                 }
@@ -265,7 +265,7 @@
                 return this.toggleInverse();
             };
 
-            BootstrapSwitch.prototype.toggleInverse = function() {
+            BootstrapSwitch.prototype.toggleInverse = function () {
                 var $off, $on;
                 this.$wrapper.toggleClass(this.options.baseClass + "-inverse");
                 $on = this.$on.clone(true);
@@ -278,7 +278,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.onColor = function(value) {
+            BootstrapSwitch.prototype.onColor = function (value) {
                 var color;
                 color = this.options.onColor;
                 if (typeof value === "undefined") {
@@ -292,7 +292,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.offColor = function(value) {
+            BootstrapSwitch.prototype.offColor = function (value) {
                 var color;
                 color = this.options.offColor;
                 if (typeof value === "undefined") {
@@ -306,7 +306,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.onText = function(value) {
+            BootstrapSwitch.prototype.onText = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.onText;
                 }
@@ -317,7 +317,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.offText = function(value) {
+            BootstrapSwitch.prototype.offText = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.offText;
                 }
@@ -328,7 +328,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.labelText = function(value) {
+            BootstrapSwitch.prototype.labelText = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.labelText;
                 }
@@ -338,7 +338,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.handleWidth = function(value) {
+            BootstrapSwitch.prototype.handleWidth = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.handleWidth;
                 }
@@ -348,7 +348,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.labelWidth = function(value) {
+            BootstrapSwitch.prototype.labelWidth = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.labelWidth;
                 }
@@ -358,11 +358,11 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.baseClass = function(value) {
+            BootstrapSwitch.prototype.baseClass = function (value) {
                 return this.options.baseClass;
             };
 
-            BootstrapSwitch.prototype.wrapperClass = function(value) {
+            BootstrapSwitch.prototype.wrapperClass = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.wrapperClass;
                 }
@@ -375,7 +375,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.radioAllOff = function(value) {
+            BootstrapSwitch.prototype.radioAllOff = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.radioAllOff;
                 }
@@ -387,7 +387,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.onInit = function(value) {
+            BootstrapSwitch.prototype.onInit = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.onInit;
                 }
@@ -398,7 +398,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.onSwitchChange = function(value) {
+            BootstrapSwitch.prototype.onSwitchChange = function (value) {
                 if (typeof value === "undefined") {
                     return this.options.onSwitchChange;
                 }
@@ -409,7 +409,7 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype.destroy = function() {
+            BootstrapSwitch.prototype.destroy = function () {
                 var $form;
                 $form = this.$element.closest("form");
                 if ($form.length) {
@@ -420,14 +420,14 @@
                 return this.$element;
             };
 
-            BootstrapSwitch.prototype._width = function() {
+            BootstrapSwitch.prototype._width = function () {
                 var $handles, handleWidth;
                 $handles = this.$on.add(this.$off);
                 $handles.add(this.$label).css("width", "");
                 handleWidth = this.options.handleWidth === "auto" ? Math.max(this.$on.width(), this.$off.width()) : this.options.handleWidth;
                 $handles.width(handleWidth);
-                this.$label.width((function(_this) {
-                    return function(index, width) {
+                this.$label.width((function (_this) {
+                    return function (index, width) {
                         if (_this.options.labelWidth !== "auto") {
                             return _this.options.labelWidth;
                         }
@@ -444,12 +444,12 @@
                 return this.$wrapper.width(this._handleWidth + this._labelWidth);
             };
 
-            BootstrapSwitch.prototype._containerPosition = function(state, callback) {
+            BootstrapSwitch.prototype._containerPosition = function (state, callback) {
                 if (state == null) {
                     state = this.options.state;
                 }
-                this.$container.css("margin-left", (function(_this) {
-                    return function() {
+                this.$container.css("margin-left", (function (_this) {
+                    return function () {
                         var values;
                         values = [0, "-" + _this._handleWidth + "px"];
                         if (_this.options.indeterminate) {
@@ -473,18 +473,18 @@
                 if (!callback) {
                     return;
                 }
-                return setTimeout(function() {
+                return setTimeout(function () {
                     return callback();
                 }, 50);
             };
 
-            BootstrapSwitch.prototype._init = function() {
+            BootstrapSwitch.prototype._init = function () {
                 var init, initInterval;
-                init = (function(_this) {
-                    return function() {
+                init = (function (_this) {
+                    return function () {
                         _this.setPrevOptions();
                         _this._width();
-                        return _this._containerPosition(null, function() {
+                        return _this._containerPosition(null, function () {
                             if (_this.options.animate) {
                                 return _this.$wrapper.addClass(_this.options.baseClass + "-animate");
                             }
@@ -494,8 +494,8 @@
                 if (this.$wrapper.is(":visible")) {
                     return init();
                 }
-                return initInterval = window.setInterval((function(_this) {
-                    return function() {
+                return initInterval = window.setInterval((function (_this) {
+                    return function () {
                         if (_this.$wrapper.is(":visible")) {
                             init();
                             return window.clearInterval(initInterval);
@@ -504,15 +504,15 @@
                 })(this), 50);
             };
 
-            BootstrapSwitch.prototype._elementHandlers = function() {
+            BootstrapSwitch.prototype._elementHandlers = function () {
                 return this.$element.on({
-                    "setPreviousOptions.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "setPreviousOptions.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             return _this.setPrevOptions();
                         };
                     })(this),
-                    "previousState.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "previousState.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             _this.options = _this.prevOptions;
                             if (_this.options.indeterminate) {
                                 _this.$wrapper.addClass(_this.options.baseClass + "-indeterminate");
@@ -520,8 +520,8 @@
                             return _this.$element.prop("checked", _this.options.state).trigger("change.bootstrapSwitch", true);
                         };
                     })(this),
-                    "change.bootstrapSwitch": (function(_this) {
-                        return function(e, skip) {
+                    "change.bootstrapSwitch": (function (_this) {
+                        return function (e, skip) {
                             var state;
                             e.preventDefault();
                             e.stopImmediatePropagation();
@@ -540,20 +540,20 @@
                             }
                         };
                     })(this),
-                    "focus.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "focus.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             e.preventDefault();
                             return _this.$wrapper.addClass(_this.options.baseClass + "-focused");
                         };
                     })(this),
-                    "blur.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "blur.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             e.preventDefault();
                             return _this.$wrapper.removeClass(_this.options.baseClass + "-focused");
                         };
                     })(this),
-                    "keydown.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "keydown.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             if (!e.which || _this.options.disabled || _this.options.readonly) {
                                 return;
                             }
@@ -572,17 +572,17 @@
                 });
             };
 
-            BootstrapSwitch.prototype._handleHandlers = function() {
-                this.$on.on("click.bootstrapSwitch", (function(_this) {
-                    return function(event) {
+            BootstrapSwitch.prototype._handleHandlers = function () {
+                this.$on.on("click.bootstrapSwitch", (function (_this) {
+                    return function (event) {
                         event.preventDefault();
                         event.stopPropagation();
                         _this.state(false);
                         return _this.$element.trigger("focus.bootstrapSwitch");
                     };
                 })(this));
-                return this.$off.on("click.bootstrapSwitch", (function(_this) {
-                    return function(event) {
+                return this.$off.on("click.bootstrapSwitch", (function (_this) {
+                    return function (event) {
                         event.preventDefault();
                         event.stopPropagation();
                         _this.state(true);
@@ -591,13 +591,13 @@
                 })(this));
             };
 
-            BootstrapSwitch.prototype._labelHandlers = function() {
+            BootstrapSwitch.prototype._labelHandlers = function () {
                 return this.$label.on({
-                    "click": function(e) {
+                    "click": function (e) {
                         return e.stopPropagation();
                     },
-                    "mousedown.bootstrapSwitch touchstart.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "mousedown.bootstrapSwitch touchstart.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             if (_this._dragStart || _this.options.disabled || _this.options.readonly) {
                                 return;
                             }
@@ -610,8 +610,8 @@
                             return _this.$element.trigger("focus.bootstrapSwitch");
                         };
                     })(this),
-                    "mousemove.bootstrapSwitch touchmove.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "mousemove.bootstrapSwitch touchmove.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             var difference;
                             if (_this._dragStart == null) {
                                 return;
@@ -625,8 +625,8 @@
                             return _this.$container.css("margin-left", _this._dragEnd + "px");
                         };
                     })(this),
-                    "mouseup.bootstrapSwitch touchend.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "mouseup.bootstrapSwitch touchend.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             var state;
                             if (!_this._dragStart) {
                                 return;
@@ -645,19 +645,19 @@
                             return _this._dragStart = false;
                         };
                     })(this),
-                    "mouseleave.bootstrapSwitch": (function(_this) {
-                        return function(e) {
+                    "mouseleave.bootstrapSwitch": (function (_this) {
+                        return function (e) {
                             return _this.$label.trigger("mouseup.bootstrapSwitch");
                         };
                     })(this)
                 });
             };
 
-            BootstrapSwitch.prototype._externalLabelHandler = function() {
+            BootstrapSwitch.prototype._externalLabelHandler = function () {
                 var $externalLabel;
                 $externalLabel = this.$element.closest("label");
-                return $externalLabel.on("click", (function(_this) {
-                    return function(event) {
+                return $externalLabel.on("click", (function (_this) {
+                    return function (event) {
                         event.preventDefault();
                         event.stopImmediatePropagation();
                         if (event.target === $externalLabel[0]) {
@@ -667,24 +667,24 @@
                 })(this));
             };
 
-            BootstrapSwitch.prototype._formHandler = function() {
+            BootstrapSwitch.prototype._formHandler = function () {
                 var $form;
                 $form = this.$element.closest("form");
                 if ($form.data("bootstrap-switch")) {
                     return;
                 }
-                return $form.on("reset.bootstrapSwitch", function() {
-                    return window.setTimeout(function() {
-                        return $form.find("input").filter(function() {
+                return $form.on("reset.bootstrapSwitch", function () {
+                    return window.setTimeout(function () {
+                        return $form.find("input").filter(function () {
                             return $(this).data("bootstrap-switch");
-                        }).each(function() {
+                        }).each(function () {
                             return $(this).bootstrapSwitch("state", this.checked);
                         });
                     }, 1);
                 }).data("bootstrap-switch", true);
             };
 
-            BootstrapSwitch.prototype._getClasses = function(classes) {
+            BootstrapSwitch.prototype._getClasses = function (classes) {
                 var c, cls, i, len;
                 if (!$.isArray(classes)) {
                     return [this.options.baseClass + "-" + classes];
@@ -700,11 +700,11 @@
             return BootstrapSwitch;
 
         })();
-        $.fn.bootstrapSwitch = function() {
+        $.fn.bootstrapSwitch = function () {
             var args, option, ret;
             option = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
             ret = this;
-            this.each(function() {
+            this.each(function () {
                 var $this, data;
                 $this = $(this);
                 data = $this.data("bootstrap-switch");
@@ -736,8 +736,10 @@
             labelWidth: "auto",
             baseClass: "bootstrap-switch",
             wrapperClass: "wrapper",
-            onInit: function() {},
-            onSwitchChange: function() {}
+            onInit: function () {
+            },
+            onSwitchChange: function () {
+            }
         };
     })(window.jQuery, window);
 

@@ -18,7 +18,7 @@ class BooleanFieldTypeQuery extends FieldTypeQuery
      * Filter a query by the value of a
      * field using this field type.
      *
-     * @param Builder         $query
+     * @param Builder $query
      * @param FilterInterface $filter
      */
     public function filter(Builder $query, FilterInterface $filter)

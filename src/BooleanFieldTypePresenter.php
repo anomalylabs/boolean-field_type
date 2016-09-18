@@ -20,6 +20,16 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     protected $object;
 
     /**
+     * Return whether the value is true.
+     *
+     * @return bool
+     */
+    public function isTrue()
+    {
+        return $this->is(true);
+    }
+
+    /**
      * Return if the value is true / false.
      *
      * @param $test
@@ -28,16 +38,6 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function is($test)
     {
         return $this->object->getValue() === filter_var($test, FILTER_VALIDATE_BOOLEAN);
-    }
-
-    /**
-     * Return whether the value is true.
-     *
-     * @return bool
-     */
-    public function isTrue()
-    {
-        return $this->is(true);
     }
 
     /**
@@ -92,8 +92,8 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the text value.
      *
-     * @param  null   $on
-     * @param  null   $off
+     * @param  null $on
+     * @param  null $off
      * @return string
      */
     public function text($on = null, $off = null)

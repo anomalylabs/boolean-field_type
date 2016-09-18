@@ -35,8 +35,6 @@ class BooleanFieldType extends FieldType
         'default_value' => false,
         'on_color'      => 'success',
         'off_color'     => 'danger',
-        'on_text'       => 'YES',
-        'off_text'      => 'NO',
     ];
 
     /**

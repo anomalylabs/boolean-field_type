@@ -19,7 +19,7 @@ class BooleanController extends PublicController
      * Toggle the boolean value.
      *
      * @param  StreamRepositoryInterface $streams
-     * @param  Container                 $container
+     * @param  Container $container
      * @throws \Exception
      */
     public function toggle(StreamRepositoryInterface $streams, Container $container)
