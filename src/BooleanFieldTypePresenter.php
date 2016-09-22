@@ -98,17 +98,20 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      */
     public function text($on = null, $off = null)
     {
-        $config = $this->object->getValue() ? 'on_text' : 'off_text';
+        $value = $this->object->getValue();
 
-        if ($on && $config == 'on_text') {
+        if ($on && $value) {
             return $on;
         }
 
-        if ($off && $config == 'off_text') {
+        if ($off && !$value) {
             return $off;
         }
 
-        return $this->object->config($config);
+        return trans($this->object->config(
+            ($value ? 'on_text' : 'off_text'),
+            'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
+        ));
     }
 
     /**
