@@ -76,17 +76,24 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return label representation of the value.
+     * Return a label.
      *
+     * @param         $text
+     * @param  string $context
+     * @param  string $size
      * @return string
      */
-    public function label()
+    public function label($text = null, $context = null, $size = null)
     {
-        if ($this->object->getValue()) {
-            return '<i class="label label-' . $this->color() . '">' . $this->text() . '</i>';
-        } else {
-            return '<i class="label label-' . $this->color() . '">' . $this->text() . '</i>';
+        if (!$text) {
+            $text = $this->text();
         }
+
+        if (!$context) {
+            $context = $this->color();
+        }
+
+        return parent::label($text, $context, $size);
     }
 
     /**
@@ -108,10 +115,12 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
             return $off;
         }
 
-        return trans($this->object->config(
-            ($value ? 'on_text' : 'off_text'),
-            'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
-        ));
+        return trans(
+            $this->object->config(
+                ($value ? 'on_text' : 'off_text'),
+                'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
+            )
+        );
     }
 
     /**
