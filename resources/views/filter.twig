@@ -1,4 +1,4 @@
-<select class="c-select form-control" name="{{ field_type.input_name }}" {{ field_type.disabled ? 'disabled' }}>
+<select class="{{ field_type.class }}" name="{{ field_type.input_name }}" {{ field_type.disabled ? 'disabled' }}>
 
     <option value="" disabled {{ not field_type.value ? 'selected' }}>{{ trans(field_type.placeholder) }}</option>
 
