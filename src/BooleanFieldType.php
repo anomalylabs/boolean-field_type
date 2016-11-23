@@ -107,4 +107,18 @@ class BooleanFieldType extends FieldType
             ]
         )->render();
     }
+    
+    /**
+     * Get the class.
+     *
+     * @return null|string
+     */
+    public function getClass()
+    {
+        if ($class = parent::getClass()) {
+            return $class;
+        }
+
+        return $this->config('mode') == 'dropdown' ? 'custom-select form-control' : null;
+    }
 }
