@@ -1,25 +1,27 @@
-<div class="c-inputs-stacked" {{ html_attributes(field_type.attributes) }}>
+<div class="custom-inputs-stacked" {{ html_attributes(field_type.attributes) }}>
 
-    <label class="c-input c-radio">
+    <label class="{#custom-control#} custom-radio">
         <input
                 type="radio"
                 value="true"
                 name="{{ field_type.input_name }}"
                 {{ field_type.is_true ? 'checked' }}>
 
-        <span class="c-indicator"></span>
+        <span class="{#custom-control-indicator#}"></span>
 
         {{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}
     </label>
 
-    <label class="c-input c-radio">
+    <br>
+
+    <label class="{#custom-control#} custom-radio">
         <input
                 type="radio"
                 value="false"
                 name="{{ field_type.input_name }}"
                 {{ field_type.is_false ? 'checked' }}>
 
-        <span class="c-indicator"></span>
+        <span class="{#custom-control-indicator#}"></span>
 
         {{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}
     </label>
