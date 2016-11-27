@@ -2,22 +2,20 @@
 {{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/bootstrap-switch.js') }}
 {{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/ajax.js') }}
 
-<label>
-    <input
-            type="checkbox"
-            data-size="small"
-            data-provides="ajax-switch"
-            data-on-text="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
-            data-off-text="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
-            data-on-color="{{ field_type.config.on_color }}"
-            data-off-color="{{ field_type.config.off_color }}"
-            data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
-            data-entry="{{ field_type.entry.id }}"
-            data-stream="{{ field_type.entry.stream.slug }}"
-            data-namespace="{{ field_type.entry.stream.namespace }}"
-            data-field="{{ field_type.field }}"
-            name="{{ field_type.input_name }}"
-            {{ field_type.value ? 'checked' }}
-            {{ field_type.readonly ? 'readonly' }}
-            {{ field_type.disabled ? 'disabled' }}>
-</label>
+<input
+        type="checkbox"
+        data-size="small"
+        data-provides="ajax-switch"
+        data-on-text="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
+        data-off-text="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
+        data-on-color="{{ field_type.config.on_color }}"
+        data-off-color="{{ field_type.config.off_color }}"
+        data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
+        data-entry="{{ field_type.entry.id }}"
+        data-stream="{{ field_type.entry.stream.slug }}"
+        data-namespace="{{ field_type.entry.stream.namespace }}"
+        data-field="{{ field_type.field }}"
+        name="{{ field_type.input_name }}"
+        {{ field_type.value ? 'checked' }}
+        {{ field_type.readonly ? 'readonly' }}
+        {{ field_type.disabled ? 'disabled' }}>
