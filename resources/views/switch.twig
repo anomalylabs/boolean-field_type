@@ -3,6 +3,12 @@
 {{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/input.js') }}
 
 <label>
+
+    <input
+            value="0"
+            type="hidden"
+            name="{{ field_type.input_name }}">
+
     <input
             type="checkbox"
             name="{{ field_type.input_name }}"
