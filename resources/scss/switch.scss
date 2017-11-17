@@ -1,3 +1,10 @@
+/* --------------------------------------------------------
+Style Sheet for boolean-field_type
+
+last modified: 2017/11/17 by William Åström
+author: William Åström
+email: william@pixney.com
+----------------------------------------------------------*/
 $boolean_field_type_transition_speed: 100ms;
 $boolean_field_type_width : 50px;
 $boolean_field_type_height: 27px;
@@ -16,8 +23,6 @@ $colors: (
 @function color($key: "success") {
 	@return map-get($colors, $key);
 }
-
-
 
 .boolean-field_type
 {
@@ -108,6 +113,15 @@ $colors: (
 	{
 		right: 0;
 	}
+
+	.switch__checkbox:disabled,
+	.switch__checkbox:checked:disabled
+	{
+		& + .switch__label 
+		{
+			opacity:0.3;
+		}
+	}
 }
 
 
@@ -136,10 +150,11 @@ $colors: (
 	}
 }
 
-// switch__checkbox--off-danger
 
 ////////////////////////////////////////////////////////////////////////////////
 // Adding text to the switch
+// 
+// This is left in case Ryan has a change of mind.
 ////////////////////////////////////////////////////////////////////////////////
 // .boolean-field_type .switch
 // {
