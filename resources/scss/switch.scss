@@ -1,0 +1,115 @@
+$boolean_field_type_width : 150px;
+.boolean-field_type
+{
+	.onoffswitch
+	{
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		width: $boolean_field_type_width;
+		flex-wrap:wrap;
+		justify-content: space-between;
+
+		-webkit-user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-ms-user-select: none;
+	}
+	.onoffswitch-checkbox
+	{
+		display: none;
+	}
+	.onoffswitch-label
+	{
+		line-height: 19px;
+
+		position: relative;
+
+		display: block;
+		overflow: hidden;
+
+		height: 19px;
+		padding: 0;
+
+		cursor: pointer;
+		transition: background-color .3s ease-in;
+
+		border: 2px solid #e3e3e3;
+		border-radius: 19px;
+		background-color: #fff;
+
+		-webkit-box-flex: 0;
+		order:1;
+		flex: 0 0 $boolean_field_type_width;
+		max-width: $boolean_field_type_width;
+	}
+	.onoffswitch-label:before
+	{
+		position: absolute;
+		top: 0;
+		right: 31px;
+		bottom: 0;
+
+		display: block;
+
+		width: 19px;
+		margin: 0;
+
+		content: '';
+		transition: all .3s ease-in 0s;
+
+		border: 2px solid #e3e3e3;
+		border-radius: 19px;
+		background: #fff;
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label
+	{
+		background-color: #735aed;
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label,
+	.onoffswitch-checkbox:checked + .onoffswitch-label:before
+	{
+		border-color: #735aed;
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label:before
+	{
+		right: 0;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Adding text to the switch
+////////////////////////////////////////////////////////////////////////////////
+.boolean-field_type .onoffswitch
+{
+	&:before,
+	&:after
+	{
+		position: relative;
+
+		overflow: hidden;
+
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		-webkit-box-flex: 0;
+		flex: 0 0 50%;
+		max-width: 50%;
+
+	}
+	&:before
+	{
+		content: attr(data-on-text);
+		order:2;
+	}
+	&:after
+	{
+		content: attr(data-off-text);
+		order:3;
+		text-align:right;
+	}
+}

@@ -6,11 +6,11 @@
         {{ field_type.readonly ? 'readonly' }}>
 
     <option value="true" {{ field_type.is_true ? 'selected' }}>
-        {{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}
+        {{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }} aa3
     </option>
 
     <option value="false" {{ field_type.is_false ? 'selected' }}>
-        {{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}
+        {{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }} aa2
     </option>
 
 </select>
