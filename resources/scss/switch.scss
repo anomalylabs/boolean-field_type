@@ -1,3 +1,4 @@
+$boolean_field_type_transition_speed: 100ms;
 $boolean_field_type_width : 50px;
 $boolean_field_type_height: 27px;
 $boolean_field_type_border_width : 2px;
@@ -5,16 +6,18 @@ $boolean_field_type_circle_size : $boolean_field_type_height - ($boolean_field_t
 $boolean_field_type_pos_off: ($boolean_field_type_width / 2) - $boolean_field_type_border_width;
 
 $colors: (
-  "success": 	#5cb85c,
-  "info": 		#5bc0de,
-  "warning":	#f0ad4e,
-  "danger":		#d9534f,
-  "default": 	#f7f7f7
-) !default;
+	"success": 	#5cb85c,
+	"info": 		#5bc0de,
+	"warning":	#f0ad4e,
+	"danger":		#d9534f,
+	"default": 	#f7f7f7
+	) !default;
 
 @function color($key: "success") {
-  @return map-get($colors, $key);
+	@return map-get($colors, $key);
 }
+
+
 
 .boolean-field_type
 {
@@ -54,7 +57,11 @@ $colors: (
 		padding: 0;
 
 		cursor: pointer;
-		transition: all .3s ease-in 0s;
+		-webkit-transition: all $boolean_field_type_transition_speed ease-in;
+		-moz-transition: all $boolean_field_type_transition_speed ease-in;
+		-ms-transition: all $boolean_field_type_transition_speed ease-in;
+		-o-transition: all $boolean_field_type_transition_speed ease-in;
+		transition: all $boolean_field_type_transition_speed ease-in;
 
 		border: 2px solid #dcd9d9;
 		border-radius: $boolean_field_type_height;
@@ -78,7 +85,11 @@ $colors: (
 		margin: 0;
 
 		content: '';
-		transition: all .3s ease-in 0s;
+		-webkit-transition: all $boolean_field_type_transition_speed ease-in;
+		-moz-transition: all $boolean_field_type_transition_speed ease-in;
+		-ms-transition: all $boolean_field_type_transition_speed ease-in;
+		-o-transition: all $boolean_field_type_transition_speed ease-in;
+		transition: all $boolean_field_type_transition_speed ease-in;
 
 		border: $boolean_field_type_border_width solid #dcd9d9;
 		border-radius: $boolean_field_type_height;
