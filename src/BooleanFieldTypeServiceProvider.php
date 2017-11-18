@@ -18,7 +18,7 @@ class BooleanFieldTypeServiceProvider extends AddonServiceProvider
      * @var array
      */
     protected $routes = [
-        'admin/boolean-field_type/toggle' => 'Anomaly\BooleanFieldType\Http\Controller\Admin\BooleanController@toggle',
+        'boolean-field_type/toggle' => 'Anomaly\BooleanFieldType\Http\Controller\BooleanController@toggle',
     ];
 
 }

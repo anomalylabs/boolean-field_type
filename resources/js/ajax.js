@@ -1,17 +1,23 @@
-$(function () {
+(function (window, document) {
 
-    // Initialize form switches
-    $('[data-provides="ajax-switch"]').each(function () {
-        $(this).bootstrapSwitch({
-            onSwitchChange: function (e, state) {
-                $.post(REQUEST_ROOT_PATH + '/admin/boolean-field_type/toggle', {
-                    state: state,
-                    entry: $(this).data('entry'),
-                    field: $(this).data('field'),
-                    stream: $(this).data('stream'),
-                    namespace: $(this).data('namespace')
-                });
-            }
+    Array.from(document.querySelectorAll('[data-provides="anomaly.field_type.boolean"]')).forEach(function ($switch) {
+
+        $switch.addEventListener('click', function (e) {
+
+            let request = new XMLHttpRequest();
+
+            request.open('POST', REQUEST_ROOT_PATH + '/boolean-field_type/toggle', true);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+            request.send({
+                _token: CSRF_TOKEN,
+                checked: e.target.checked,
+                entry: e.target.dataset.entry,
+                field: e.target.dataset.field,
+                stream: e.target.dataset.stream,
+                namespace: e.target.dataset.namespace
+            });
+
         });
     });
-});
+})(window, document);

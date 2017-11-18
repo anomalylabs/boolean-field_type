@@ -1,7 +1,7 @@
-<?php namespace Anomaly\BooleanFieldType\Http\Controller\Admin;
+<?php namespace Anomaly\BooleanFieldType\Http\Controller;
 
 use Anomaly\Streams\Platform\Entry\Contract\EntryRepositoryInterface;
-use Anomaly\Streams\Platform\Http\Controller\AdminController;
+use Anomaly\Streams\Platform\Http\Controller\PublicController;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
 
@@ -12,7 +12,7 @@ use Illuminate\Contracts\Container\Container;
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
  */
-class BooleanController extends AdminController
+class BooleanController extends PublicController
 {
 
     /**
@@ -63,7 +63,7 @@ class BooleanController extends AdminController
          * Make the request change to the entry
          * based on the state submitted.
          */
-        $entry->{$this->request->get('field')} = $this->request->get('state');
+        $entry->{$this->request->get('field')} = $this->request->get('checked');
 
         /*
          * Save and don't return a thing.
