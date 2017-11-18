@@ -7,16 +7,16 @@
             let request = new XMLHttpRequest();
 
             request.open('POST', REQUEST_ROOT_PATH + '/boolean-field_type/toggle', true);
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            request.setRequestHeader('Content-Type', 'application/json');
 
-            request.send({
+            request.send(JSON.stringify({
                 _token: CSRF_TOKEN,
                 checked: e.target.checked,
                 entry: e.target.dataset.entry,
                 field: e.target.dataset.field,
                 stream: e.target.dataset.stream,
                 namespace: e.target.dataset.namespace
-            });
+            }));
 
         });
     });
