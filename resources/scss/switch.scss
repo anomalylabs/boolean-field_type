@@ -51,12 +51,18 @@ $colors: (
     }
 
     .switch__label {
-        line-height: $boolean_field_type_height;
+
+        // Allow for inner text
+        line-height: 1.4;
+        overflow: visible;
+        text-indent: 3.5rem;
+        white-space: nowrap;
+
+        //line-height: $boolean_field_type_height;
 
         position: relative;
 
         display: block;
-        overflow: hidden;
 
         height: $boolean_field_type_height;
         padding: 0;
