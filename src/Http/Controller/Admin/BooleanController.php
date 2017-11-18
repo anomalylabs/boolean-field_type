@@ -1,18 +1,18 @@
-<?php namespace Anomaly\BooleanFieldType\Http\Controller;
+<?php namespace Anomaly\BooleanFieldType\Http\Controller\Admin;
 
 use Anomaly\Streams\Platform\Entry\Contract\EntryRepositoryInterface;
-use Anomaly\Streams\Platform\Http\Controller\PublicController;
+use Anomaly\Streams\Platform\Http\Controller\AdminController;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
 
 /**
  * Class BooleanController
  *
- * @link          http://pyrocms.com/
- * @author        PyroCMS, Inc. <support@pyrocms.com>
- * @author        Ryan Thompson <ryan@pyrocms.com>
+ * @link   http://pyrocms.com/
+ * @author PyroCMS, Inc. <support@pyrocms.com>
+ * @author Ryan Thompson <ryan@pyrocms.com>
  */
-class BooleanController extends PublicController
+class BooleanController extends AdminController
 {
 
     /**
@@ -69,5 +69,11 @@ class BooleanController extends PublicController
          * Save and don't return a thing.
          */
         $repository->save($entry);
+
+        return $this->response->json(
+            [
+                'errors' => [],
+            ]
+        );
     }
 }

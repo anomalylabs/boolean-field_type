@@ -1,12 +1,18 @@
 (function (window, document) {
 
-    Array.from(document.querySelectorAll('[data-provides="anomaly.field_type.boolean"]')).forEach(function ($switch) {
+    let switches = Array.from(
+        document.querySelectorAll(
+            '[data-provides="anomaly.field_type.boolean"].switch__checkbox--ajax'
+        )
+    );
+
+    switches.forEach(function ($switch) {
 
         $switch.addEventListener('click', function (e) {
 
             let request = new XMLHttpRequest();
 
-            request.open('POST', REQUEST_ROOT_PATH + '/boolean-field_type/toggle', true);
+            request.open('POST', REQUEST_ROOT_PATH + '/admin/boolean-field_type/toggle', true);
             request.setRequestHeader('Content-Type', 'application/json');
 
             request.send(JSON.stringify({

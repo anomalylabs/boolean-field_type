@@ -1,5 +1,4 @@
 {{ asset_add('styles.css', 'anomaly.field_type.boolean::scss/switch.scss') }}
-{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/ajax.js') }}
 
 <div class="switch">
 
@@ -7,11 +6,6 @@
             type="checkbox"
             id="{{ field_type.field }}"
             name="{{ field_type.input_name }}"
-
-            data-field="{{ field_type.field }}"
-            data-entry="{{ field_type.entry.id }}"
-            data-stream="{{ field_type.entry.stream.slug }}"
-            data-namespace="{{ field_type.entry.stream.namespace }}"
 
             class="
                 switch__checkbox
