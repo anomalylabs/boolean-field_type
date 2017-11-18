@@ -1,12 +1,12 @@
 (function (window, document) {
 
     let switches = Array.from(
-        document.querySelectorAll(
-            '[data-provides="anomaly.field_type.boolean"].switch__checkbox--ajax'
-        )
+        document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]:not([data-initialized])')
     );
 
     switches.forEach(function ($switch) {
+
+        $switch.dataset.initialized = true;
 
         $switch.addEventListener('click', function (e) {
 

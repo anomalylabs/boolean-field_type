@@ -88,25 +88,6 @@ class BooleanFieldType extends FieldType
     {
         return view('anomaly.field_type.boolean::ajax', ['field_type' => $this])->render();
     }
-
-    /**
-     * Return the symbolic icon input.
-     *
-     * @param $onIcon
-     * @param $offIcon
-     * @return string
-     */
-    public function getIconInput($onIcon = 'check-square-alt', $offIcon = '')
-    {
-        return view(
-            'anomaly.field_type.boolean::icon',
-            [
-                'field_type' => $this,
-                'on_icon'    => $onIcon,
-                'off_icon'   => $offIcon,
-            ]
-        )->render();
-    }
     
     /**
      * Get the class.
