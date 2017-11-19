@@ -1,12 +1,10 @@
 (function (window, document) {
 
     let fields = Array.from(
-        document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]:not([data-initialized])')
+        document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]')
     );
 
     fields.forEach(function (field) {
-
-        field.dataset.initialized = true;
 
         field.addEventListener('click', function (event) {
 
