@@ -1,14 +1,14 @@
 (function (window, document) {
 
-    let fields = Array.from(
+    let inputs = Array.from(
         document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]:not([data-initialized])')
     );
 
-    fields.forEach(function (field) {
+    inputs.forEach(function (input) {
 
-        field.dataset.initialized = true;
+        input.dataset.initialized = true;
 
-        field.addEventListener('click', function (e) {
+        input.addEventListener('click', function (event) {
 
             let request = new XMLHttpRequest();
 
@@ -17,11 +17,11 @@
 
             request.send(JSON.stringify({
                 _token: CSRF_TOKEN,
-                checked: e.target.checked,
-                entry: e.target.dataset.entry,
-                field: e.target.dataset.field,
-                stream: e.target.dataset.stream,
-                namespace: e.target.dataset.namespace
+                checked: event.target.checked,
+                entry: event.target.dataset.entry,
+                field: event.target.dataset.field,
+                stream: event.target.dataset.stream,
+                namespace: event.target.dataset.namespace
             }));
 
         });
