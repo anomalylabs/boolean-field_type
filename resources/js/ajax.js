@@ -1,14 +1,14 @@
 (function (window, document) {
 
-    let switches = Array.from(
+    let inputs = Array.from(
         document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]:not([data-initialized])')
     );
 
-    switches.forEach(function ($switch) {
+    inputs.forEach(function (input) {
 
-        $switch.dataset.initialized = true;
+        input.dataset.initialized = true;
 
-        $switch.addEventListener('click', function (e) {
+        input.addEventListener('click', function (e) {
 
             let request = new XMLHttpRequest();
 
