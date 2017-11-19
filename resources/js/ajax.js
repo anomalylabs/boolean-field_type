@@ -1,14 +1,14 @@
 (function (window, document) {
 
-    let inputs = Array.from(
+    let fields = Array.from(
         document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]:not([data-initialized])')
     );
 
-    inputs.forEach(function (input) {
+    fields.forEach(function (field) {
 
-        input.dataset.initialized = true;
+        field.dataset.initialized = true;
 
-        input.addEventListener('click', function (event) {
+        field.addEventListener('click', function (event) {
 
             let request = new XMLHttpRequest();
 
