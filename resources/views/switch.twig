@@ -4,7 +4,7 @@
 
     <input
             type="checkbox"
-            id="{{ field_type.field }}"
+            id="{{ field_type.input_name }}"
             name="{{ field_type.input_name }}"
 
             class="
@@ -19,7 +19,7 @@
 
     <label
             class="switch__label"
-            for="{{ field_type.field }}">
+            for="{{ field_type.input_name }}">
         {{ trans(field_type.config.label) }}
     </label>
 
