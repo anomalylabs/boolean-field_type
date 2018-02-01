@@ -13,6 +13,12 @@ $boolean_field_type_border_width: 2px;
 $boolean_field_type_circle_size: $boolean_field_type_height - ($boolean_field_type_border_width * 2);
 $boolean_field_type_pos_off: ($boolean_field_type_width / 2) - $boolean_field_type_border_width;
 
+$brand-success:             #47d165 !default;
+$brand-info:                #11bef6 !default;
+$brand-warning:             #ff754b !default;
+$brand-danger:              #ff3160 !default;
+$gray:                      #55595c !default;
+
 $colors: (
         "success": $brand-success,
         "warning": $brand-warning,
