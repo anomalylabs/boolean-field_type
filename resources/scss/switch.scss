@@ -1,30 +1,17 @@
 /* --------------------------------------------------------
 Style Sheet for boolean-field_type
 
-last modified: 2017/11/17 by William Åström
+last modified: 2018/02/01 by Edi Mange
 author: William Åström
 email: william@pixney.com
 ----------------------------------------------------------*/
 
-$boolean_field_type_transition_speed: 100ms;
-$boolean_field_type_width: 57px;
-$boolean_field_type_height: 30px;
-$boolean_field_type_border_width: 2px;
-$boolean_field_type_circle_size: $boolean_field_type_height - ($boolean_field_type_border_width * 2);
-$boolean_field_type_pos_off: ($boolean_field_type_width / 2) - $boolean_field_type_border_width;
-
-$brand-success:             #47d165 !default;
-$brand-info:                #11bef6 !default;
-$brand-warning:             #ff754b !default;
-$brand-danger:              #ff3160 !default;
-$gray:                      #55595c !default;
-
 $colors: (
-        "success": $brand-success,
-        "warning": $brand-warning,
-        "danger": $brand-danger,
-        "info": $brand-info,
-        "default": $gray
+        "success": #47d165 !default,
+        "warning": #ff754b !default,
+        "danger": #ff3160 !default,
+        "info": #11bef6 !default,
+        "default": #55595c !default
 ) !default;
 
 @function color($key: "success") {
@@ -40,7 +27,7 @@ $colors: (
         align-items: center;
         justify-content: flex-start;
 
-        width: $boolean_field_type_width;
+        width: 57px;
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -64,52 +51,52 @@ $colors: (
         text-indent: 3.5rem;
         white-space: nowrap;
 
-        //line-height: $boolean_field_type_height;
+        //line-height: 2px;
 
         position: relative;
 
         display: block;
 
-        height: $boolean_field_type_height;
+        height: 2px;
         padding: 0;
 
         cursor: pointer;
-        -webkit-transition: all $boolean_field_type_transition_speed ease-in;
-        -moz-transition: all $boolean_field_type_transition_speed ease-in;
-        -ms-transition: all $boolean_field_type_transition_speed ease-in;
-        -o-transition: all $boolean_field_type_transition_speed ease-in;
-        transition: all $boolean_field_type_transition_speed ease-in;
+        -webkit-transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+        -ms-transition: all 100ms ease-in;
+        -o-transition: all 100ms ease-in;
+        transition: all 100ms ease-in;
 
         border: 2px solid #dcd9d9;
-        border-radius: $boolean_field_type_height;
+        border-radius: 2px;
         background-color: #dcd9d9;
 
         -webkit-box-flex: 0;
         order: 1;
-        flex: 0 0 $boolean_field_type_width;
-        max-width: $boolean_field_type_width;
+        flex: 0 0 57px;
+        max-width: 57px;
     }
 
     .switch__label:before {
         position: absolute;
         top: 0;
-        right: $boolean_field_type_pos_off;
+        right: 26.5px;
         bottom: 0;
 
         display: block;
 
-        width: $boolean_field_type_circle_size;
+        width: -2px;
         margin: 0;
 
         content: '';
-        -webkit-transition: all $boolean_field_type_transition_speed ease-in;
-        -moz-transition: all $boolean_field_type_transition_speed ease-in;
-        -ms-transition: all $boolean_field_type_transition_speed ease-in;
-        -o-transition: all $boolean_field_type_transition_speed ease-in;
-        transition: all $boolean_field_type_transition_speed ease-in;
+        -webkit-transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+        -ms-transition: all 100ms ease-in;
+        -o-transition: all 100ms ease-in;
+        transition: all 100ms ease-in;
 
-        border: $boolean_field_type_border_width solid #dcd9d9;
-        border-radius: $boolean_field_type_height;
+        border: 2px solid #dcd9d9;
+        border-radius: 2px;
         background: #ffffff;
     }
 
