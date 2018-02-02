@@ -1,17 +1,24 @@
 /* --------------------------------------------------------
 Style Sheet for boolean-field_type
 
-last modified: 2018/02/01 by Edi Mange
+last modified: 2017/11/17 by William Åström
 author: William Åström
 email: william@pixney.com
 ----------------------------------------------------------*/
 
+$boolean_field_type_transition_speed: 100ms;
+$boolean_field_type_width: 57px;
+$boolean_field_type_height: 30px;
+$boolean_field_type_border_width: 2px;
+$boolean_field_type_circle_size: $boolean_field_type_height - ($boolean_field_type_border_width * 2);
+$boolean_field_type_pos_off: ($boolean_field_type_width / 2) - $boolean_field_type_border_width;
+
 $colors: (
-        "success": #47d165 !default,
-        "warning": #ff754b !default,
-        "danger": #ff3160 !default,
-        "info": #11bef6 !default,
-        "default": #55595c !default
+        "success": #47d165,
+        "warning": #ff754b,
+        "danger": #ff3160,
+        "info": #11bef6,
+        "default": #55595c
 ) !default;
 
 @function color($key: "success") {
@@ -27,7 +34,7 @@ $colors: (
         align-items: center;
         justify-content: flex-start;
 
-        width: 57px;
+        width: $boolean_field_type_width;
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -51,52 +58,52 @@ $colors: (
         text-indent: 3.5rem;
         white-space: nowrap;
 
-        //line-height: 2px;
+        //line-height: $boolean_field_type_height;
 
         position: relative;
 
         display: block;
 
-        height: 2px;
+        height: $boolean_field_type_height;
         padding: 0;
 
         cursor: pointer;
-        -webkit-transition: all 100ms ease-in;
-        -moz-transition: all 100ms ease-in;
-        -ms-transition: all 100ms ease-in;
-        -o-transition: all 100ms ease-in;
-        transition: all 100ms ease-in;
+        -webkit-transition: all $boolean_field_type_transition_speed ease-in;
+        -moz-transition: all $boolean_field_type_transition_speed ease-in;
+        -ms-transition: all $boolean_field_type_transition_speed ease-in;
+        -o-transition: all $boolean_field_type_transition_speed ease-in;
+        transition: all $boolean_field_type_transition_speed ease-in;
 
         border: 2px solid #dcd9d9;
-        border-radius: 2px;
+        border-radius: $boolean_field_type_height;
         background-color: #dcd9d9;
 
         -webkit-box-flex: 0;
         order: 1;
-        flex: 0 0 57px;
-        max-width: 57px;
+        flex: 0 0 $boolean_field_type_width;
+        max-width: $boolean_field_type_width;
     }
 
     .switch__label:before {
         position: absolute;
         top: 0;
-        right: 26.5px;
+        right: $boolean_field_type_pos_off;
         bottom: 0;
 
         display: block;
 
-        width: -2px;
+        width: $boolean_field_type_circle_size;
         margin: 0;
 
         content: '';
-        -webkit-transition: all 100ms ease-in;
-        -moz-transition: all 100ms ease-in;
-        -ms-transition: all 100ms ease-in;
-        -o-transition: all 100ms ease-in;
-        transition: all 100ms ease-in;
+        -webkit-transition: all $boolean_field_type_transition_speed ease-in;
+        -moz-transition: all $boolean_field_type_transition_speed ease-in;
+        -ms-transition: all $boolean_field_type_transition_speed ease-in;
+        -o-transition: all $boolean_field_type_transition_speed ease-in;
+        transition: all $boolean_field_type_transition_speed ease-in;
 
-        border: 2px solid #dcd9d9;
-        border-radius: 2px;
+        border: $boolean_field_type_border_width solid #dcd9d9;
+        border-radius: $boolean_field_type_height;
         background: #ffffff;
     }
 
