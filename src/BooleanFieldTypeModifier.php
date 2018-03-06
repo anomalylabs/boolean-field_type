@@ -16,11 +16,11 @@ class BooleanFieldTypeModifier extends FieldTypeModifier
      * Modify the value.
      *
      * @param $value
-     * @return bool
+     * @return int
      */
     public function modify($value)
     {
-        return filter_var($value, FILTER_VALIDATE_BOOLEAN);
+        return (int)filter_var($value, FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
