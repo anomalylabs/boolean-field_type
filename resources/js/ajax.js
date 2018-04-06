@@ -1,6 +1,6 @@
 (function (window, document) {
 
-    let fields = Array.from(
+    let fields = Array.prototype.slice.call(
         document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]')
     );
 
