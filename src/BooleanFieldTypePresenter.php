@@ -117,9 +117,8 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
 
         return trans(
             $this->object->config(
-                ($value ? 'on_text' : 'off_text'),
-                'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
-            )
+                $value ? 'on_text' : 'off_text'
+            ) ?: 'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
         );
     }
 
