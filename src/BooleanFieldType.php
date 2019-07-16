@@ -20,6 +20,13 @@ class BooleanFieldType extends FieldType
     public $columnType = 'boolean';
 
     /**
+     * The input view.
+     *
+     * @var null|string
+     */
+    protected $inputView = null;
+
+    /**
      * The filter view.
      *
      * @var string
@@ -66,6 +73,10 @@ class BooleanFieldType extends FieldType
      */
     public function getInputView()
     {
+        if ($view = parent::getInputView()) {
+            return $view;
+        }
+
         return 'anomaly.field_type.boolean::' . $this->mode();
     }
 
@@ -88,7 +99,7 @@ class BooleanFieldType extends FieldType
     {
         return view('anomaly.field_type.boolean::ajax', ['field_type' => $this])->render();
     }
-    
+
     /**
      * Get the class.
      *
