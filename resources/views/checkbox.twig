@@ -11,8 +11,9 @@
                 type="checkbox"
                 name="{{ field_type.input_name }}"
                 {{ field_type.value ? 'checked' }}
+                {{ field_type.disabled ? 'disabled' }}
                 {{ field_type.readonly ? 'readonly' }}
-                {{ field_type.disabled ? 'disabled' }}>
+                {{ field_type.readonly ? 'onclick="return false;"' }}>
 
         <span class="c-indicator"></span>
 
