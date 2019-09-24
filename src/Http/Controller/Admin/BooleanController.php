@@ -3,7 +3,6 @@
 use Anomaly\Streams\Platform\Entry\Contract\EntryRepositoryInterface;
 use Anomaly\Streams\Platform\Http\Controller\AdminController;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
-use Illuminate\Contracts\Container\Container;
 
 /**
  * Class BooleanController
@@ -19,10 +18,9 @@ class BooleanController extends AdminController
      * Toggle the boolean value.
      *
      * @param  StreamRepositoryInterface $streams
-     * @param  Container                 $container
      * @throws \Exception
      */
-    public function toggle(StreamRepositoryInterface $streams, Container $container)
+    public function toggle(StreamRepositoryInterface $streams)
     {
 
         /*
@@ -30,8 +28,8 @@ class BooleanController extends AdminController
          * it's slug and namespace.
          */
         if (!$stream = $streams->findBySlugAndNamespace(
-            $slug = $this->request->get('stream'),
-            $namespace = $this->request->get('namespace')
+            $slug = request('stream'),
+            $namespace = request('namespace')
         )
         ) {
             throw new \Exception("Stream not found with slug [{$slug}] in namespace [{$namespace}].");
@@ -43,7 +41,7 @@ class BooleanController extends AdminController
         $model = $stream->getEntryModel();
 
         /* @var EntryRepositoryInterface $repository */
-        $repository = $container->make(EntryRepositoryInterface::class);
+        $repository = app(EntryRepositoryInterface::class);
 
         /*
          * Set the model manually since
@@ -55,7 +53,7 @@ class BooleanController extends AdminController
          * Try finding the entry with
          * our generic repository.
          */
-        if (!$entry = $repository->find($id = $this->request->get('entry'))) {
+        if (!$entry = $repository->find($id = request('entry'))) {
             throw new \Exception("Entry [{$id}] not found in stream [{$slug}] in namespace [{$namespace}].");
         }
 
@@ -63,14 +61,14 @@ class BooleanController extends AdminController
          * Make the request change to the entry
          * based on the state submitted.
          */
-        $entry->{$this->request->get('field')} = $this->request->get('checked');
+        $entry->{request('field')} = request('checked');
 
         /*
          * Save and don't return a thing.
          */
         $repository->save($entry);
 
-        return $this->response->json(
+        return response()->json(
             [
                 'errors' => [],
             ]
