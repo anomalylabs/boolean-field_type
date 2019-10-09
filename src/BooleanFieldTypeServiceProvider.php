@@ -1,23 +1,25 @@
-<?php namespace Anomaly\BooleanFieldType;
+<?php
 
+namespace Anomaly\BooleanFieldType;
+
+use Anomaly\BooleanFieldType\BooleanFieldType;
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 
 /**
  * Class BooleanFieldTypeServiceProvider
  *
- * @link          http://pyrocms.com/
- * @author        PyroCMS, Inc. <support@pyrocms.com>
- * @author        Ryan Thompson <ryan@pyrocms.com>
+ * @link   http://pyrocms.com/
+ * @author Ryan Thompson <ryan@pyrocms.com>
  */
-class BooleanFieldTypeServiceProvider extends AddonServiceProvider
+class BooleanFieldTypeServiceProvider extends AddonServiceProvider implements DeferrableProvider
 {
 
     /**
-     * The addon routes.
-     *
-     * @var array
+     * Return the provided services.
      */
-    protected $routes = [
-        'admin/boolean-field_type/toggle' => 'Anomaly\BooleanFieldType\Http\Controller\Admin\BooleanController@toggle',
-    ];
+    public function provides()
+    {
+        return [BooleanFieldType::class];
+    }
 }
