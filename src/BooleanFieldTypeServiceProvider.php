@@ -20,6 +20,6 @@ class BooleanFieldTypeServiceProvider extends AddonServiceProvider implements De
      */
     public function provides()
     {
-        return [BooleanFieldType::class];
+        return [BooleanFieldType::class, 'anomaly.field_type.boolean'];
     }
 }
