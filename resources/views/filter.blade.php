@@ -1,14 +1,16 @@
 <select
         class="custom-select form-control"
-        name="{{ $field_type->input_name }}" {{ $field_type->disabled ? 'disabled' }}>
+        name="{{ $fieldType->input_name }}" {{ $fieldType->disabled ? 'disabled' : '' }}>
 
-    <option value="" disabled {{ not $field_type->value ? 'selected' }}>{{ trans($field_type->placeholder) }}</option>
-
-    <option value="false" {{ $field_type->value == 'false' ? 'selected' }}>
-        {{ trans($field_type->config->off_text ?: 'anomaly.field_type.boolean::choice.no') }}
+    <option value="" disabled {{ $fieldType->value ? '' : 'selected' }}>
+        {{ $fieldType->getPlaceholder() }}
     </option>
-    <option value="true" {{ $field_type->value == 'true' ? 'selected' }}>
-        {{ trans($field_type->config->on_text ?: 'anomaly.field_type.boolean::choice.yes') }}
+
+    <option value="false" {{ $fieldType->value == 'false' ? 'selected' : '' }}>
+        {{ trans($fieldType->config('off_text', 'anomaly.field_type.boolean::choice.no')) }}
+    </option>
+    <option value="true" {{ $fieldType->value == 'true' ? 'selected' : '' }}>
+        {{ trans($fieldType->config('on_text', 'anomaly.field_type.boolean::choice.yes')) }}
     </option>
 
 </select>
