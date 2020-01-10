@@ -53,21 +53,6 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return icon representation of the value.
-     *
-     * @param  string $size
-     * @return string
-     */
-    public function icon($size = 'lg')
-    {
-        if ($this->object->getValue()) {
-            return '<i class="text-' . $this->color() . ' fa fa-check fa-' . $size . '"></i>';
-        } else {
-            return '<i class="text-' . $this->color() . ' fa fa-close fa-' . $size . '"></i>';
-        }
-    }
-
-    /**
      * Return the configured color the value represents.
      *
      * @return string
@@ -75,27 +60,6 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     public function color()
     {
         return $this->object->config($this->object->getValue() ? 'on_color' : 'off_color');
-    }
-
-    /**
-     * Return a label.
-     *
-     * @param         $text
-     * @param  string $context
-     * @param  string $size
-     * @return string
-     */
-    public function label($text = null, $context = null, $size = null)
-    {
-        if (!$text) {
-            $text = $this->text();
-        }
-
-        if (!$context) {
-            $context = $this->color();
-        }
-
-        return parent::label($text, $context, $size);
     }
 
     /**
@@ -117,15 +81,15 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
             return $off;
         }
 
-        return trans(
-            $this->object->config(
-                $value ? 'on_text' : 'off_text'
-            ) ?: 'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
-        );
+        return $this->object->config(
+            $value ? 'on_text' : 'off_text'
+        ) ?: 'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no');
     }
 
     /**
      * Return the input for AJAX use.
+     *
+     * @todo replace with internal API / standard something or other.
      *
      * @return string
      */
