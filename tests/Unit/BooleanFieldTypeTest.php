@@ -49,4 +49,23 @@ class BooleanFieldTypeTest extends TestCase
 
         $this->assertTrue($fieldType->getAjaxInput() instanceof View);
     }
+
+    public function testClass()
+    {
+        $fieldType = app(BooleanFieldType::class)
+            ->setField('boolean');
+
+        $this->assertTrue(str_contains($fieldType->class('foo bar'), 'input'));
+    }
+
+    public function testAttributes()
+    {
+        $fieldType = app(BooleanFieldType::class)
+            ->setValue(true)
+            ->setField('boolean');
+
+        $attributes = $fieldType->attributes();
+
+        $this->assertTrue(array_get($attributes, 'checked') === 'checked');
+    }
 }

@@ -1,4 +1,6 @@
-<?php namespace Anomaly\BooleanFieldType;
+<?php
+
+namespace Anomaly\BooleanFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 

@@ -95,25 +95,26 @@ class BooleanFieldType extends FieldType
     /**
      * Render the input.
      *
-     * @return string
+     * @return View
      */
     public function getAjaxInput()
     {
-        return view('anomaly.field_type.boolean::ajax', ['field_type' => $this])->render();
+        return view('anomaly.field_type.boolean::ajax', ['fieldType' => $this]);
     }
 
     /**
-     * Get the class.
+     * Return class HTML.
      *
+     * @param string $class
      * @return null|string
      */
-    public function getClass()
+    public function class($class = null)
     {
-        if ($class = parent::getClass()) {
-            return $class;
-        }
-
-        return $this->config('mode') == 'dropdown' ? 'custom-select form-control' : null;
+        return trim(implode(' ', array_filter([
+            $class,
+            $this->getClass(),
+            //$this->config('mode') == 'dropdown' ? 'custom-select form-control' : null
+        ])));
     }
 
     /**
@@ -124,15 +125,11 @@ class BooleanFieldType extends FieldType
     public function attributes(array $attributes = [])
     {
         if (filter_var($this->getValue(), FILTER_VALIDATE_BOOLEAN)) {
-            $attributes['checked'] = array_get($attributes, 'checked', 'checked');
+            self::mergeAttributeDefaults(['checked' => 'checked'], $attributes);
         }
 
         return array_merge(parent::attributes(), [
-            type = "checkbox"
-            // 'data-field' => $this->field,
-            // 'data-entry' => $this->entry->id,
-            // 'data-stream' => $this->entry->stream->slug,
-            // 'data-namespace' => $this->entry->stream->namespace,
+            'type' => 'checkbox',
         ], $attributes);
     }
 }
