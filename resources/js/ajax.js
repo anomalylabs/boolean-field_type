@@ -1,4 +1,4 @@
-(function (window, document) {
+(function () {
 
     let fields = Array.prototype.slice.call(
         document.querySelectorAll('[data-toggle="anomaly.field_type.boolean"]')
@@ -24,4 +24,4 @@
 
         });
     });
-})(window, document);
+});
