@@ -1,4 +1,6 @@
-<?php namespace Anomaly\BooleanFieldType;
+<?php
+
+namespace Anomaly\BooleanFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
@@ -112,5 +114,25 @@ class BooleanFieldType extends FieldType
         }
 
         return $this->config('mode') == 'dropdown' ? 'custom-select form-control' : null;
+    }
+
+    /**
+     * Return merged attributes.
+     *
+     * @param array $attributes
+     */
+    public function attributes(array $attributes = [])
+    {
+        if (filter_var($this->getValue(), FILTER_VALIDATE_BOOLEAN)) {
+            $attributes['checked'] = array_get($attributes, 'checked', 'checked');
+        }
+
+        return array_merge(parent::attributes(), [
+            type = "checkbox"
+            // 'data-field' => $this->field,
+            // 'data-entry' => $this->entry->id,
+            // 'data-stream' => $this->entry->stream->slug,
+            // 'data-namespace' => $this->entry->stream->namespace,
+        ], $attributes);
     }
 }
