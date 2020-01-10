@@ -1,7 +1,0 @@
-/bin
-/vendor
-/coverage
-/mix-manifest.json
-/package-lock.json
-/yarn.lock
-/node_modules
