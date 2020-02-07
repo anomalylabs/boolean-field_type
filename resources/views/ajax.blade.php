@@ -14,8 +14,8 @@
                     'data-field' => $fieldType->field,
                     'data-entry' => $fieldType->entry->id,
                     'data-toggle' => $fieldType->namespace,
-                    'data-stream' => $fieldType->entry->stream->slug,
-                    'data-namespace' => $fieldType->entry->stream->namespace,
+                    'data-stream' => $fieldType->entry->stream()->slug,
+                    'data-namespace' => $fieldType->entry->stream()->namespace,
                 ])) !!}>
         <label
                 class="switch__label"
