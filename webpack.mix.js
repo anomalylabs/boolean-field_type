@@ -12,7 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix
-    .sass('resources/scss/switch.scss', 'resources/css');
+    .js('resources/assets/js/switch.js', 'resources/dist/js');
 
 // Full API
 // mix.js(src, output);
