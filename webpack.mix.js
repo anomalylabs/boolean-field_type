@@ -5,7 +5,7 @@ let mix = require('laravel-mix');
  | Webpack Configuration
  |--------------------------------------------------------------------------
  |
- | Configure webpack for mix.
+ | Configure webpack...
  |
  */
 mix.webpackConfig({
