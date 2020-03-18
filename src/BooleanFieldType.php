@@ -129,7 +129,7 @@ class BooleanFieldType extends FieldType
         }
 
         return array_merge(parent::attributes(), [
-            'type' => 'checkbox',
+            //
         ], $attributes);
     }
 }
