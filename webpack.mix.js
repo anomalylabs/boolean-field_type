@@ -1,13 +1,5 @@
 let mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Webpack Configuration
- |--------------------------------------------------------------------------
- |
- | Configure webpack...
- |
- */
 mix.webpackConfig({
     externals: {
         "@anomaly/streams-platform": "streams"
