@@ -6,7 +6,7 @@
     <v-switch
     {!! html_attributes([
         'value' => $fieldType->getValue(),
-        'label' => $fieldType->getLabel(),
+        'label' => $fieldType->label,
         'name'  => $fieldType->getInputName(),
         'hint'  =>  $fieldType->instructions,
         

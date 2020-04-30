@@ -3,7 +3,7 @@
         name="{{ $fieldType->input_name }}" {{ $fieldType->disabled ? 'disabled' : '' }}>
 
     <option value="" disabled {{ $fieldType->value ? '' : 'selected' }}>
-        {{ $fieldType->getPlaceholder() }}
+        {{ $fieldType->placeholder }}
     </option>
 
     <option value="false" {{ $fieldType->value == 'false' ? 'selected' : '' }}>
