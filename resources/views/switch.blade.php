@@ -8,7 +8,7 @@
         'value' => $fieldType->getValue(),
         'label' => $fieldType->getLabel(),
         'name'  => $fieldType->getInputName(),
-        'hint'  =>  $fieldType->getInstructions(),
+        'hint'  =>  $fieldType->instructions,
         
         'readonly' => $fieldType->readonly ? true : false,
         'disabled' => $fieldType->disabled ? true : false,
