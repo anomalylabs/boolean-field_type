@@ -10,7 +10,7 @@
         'name'  => $fieldType->getInputName(),
         'hint'  =>  $fieldType->getInstructions(),
         
-        'readonly' => $fieldType->isReadonly() ? true : false,
+        'readonly' => $fieldType->readonly ? true : false,
         'disabled' => $fieldType->isDisabled() ? true : false,
     
         // 'data-field'      => $fieldType->getField(),
