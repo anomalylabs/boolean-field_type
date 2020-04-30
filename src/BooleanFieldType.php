@@ -40,7 +40,7 @@ class BooleanFieldType extends FieldType
      *
      * @var array
      */
-    protected $config = [
+    public $config = [
         'default_value' => false,
         'on_color'      => 'success',
         'off_color'     => 'danger',
