@@ -125,7 +125,7 @@ class BooleanFieldType extends FieldType
     public function attributes(array $attributes = [])
     {
         if (filter_var($this->getValue(), FILTER_VALIDATE_BOOLEAN)) {
-            self::mergeAttributeDefaults(['checked' => 'checked'], $attributes);
+            $this->setAttribute('checked', 'checked');
         }
 
         return array_merge(parent::attributes(), [
