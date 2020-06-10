@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 use Illuminate\Contracts\View\View;
 use Anomaly\BooleanFieldType\BooleanFieldType;
 
@@ -67,6 +68,6 @@ class BooleanFieldTypeTest extends TestCase
 
         $attributes = $fieldType->attributes();
 
-        $this->assertTrue(array_get($attributes, 'checked') === 'checked');
+        $this->assertTrue(Arr::get($attributes, 'checked') === 'checked');
     }
 }
