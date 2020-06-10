@@ -1,7 +1,8 @@
 <?php
 
-use Anomaly\BooleanFieldType\BooleanFieldType;
+use Illuminate\Support\Str;
 use Illuminate\Contracts\View\View;
+use Anomaly\BooleanFieldType\BooleanFieldType;
 
 class BooleanFieldTypeTest extends TestCase
 {
@@ -55,7 +56,7 @@ class BooleanFieldTypeTest extends TestCase
         $fieldType = app(BooleanFieldType::class)
             ->setField('boolean');
 
-        $this->assertTrue(str_contains($fieldType->class('foo bar'), 'input'));
+        $this->assertTrue(Str::contains($fieldType->class('foo bar'), 'input'));
     }
 
     public function testAttributes()
