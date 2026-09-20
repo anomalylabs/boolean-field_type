@@ -121,14 +121,4 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
             ) ?: 'anomaly.field_type.boolean::choice.' . ($value ? 'yes' : 'no')
         );
     }
-
-    /**
-     * Return the input for AJAX use.
-     *
-     * @return string
-     */
-    public function toggle()
-    {
-        return $this->object->getAjaxInput();
-    }
 }
