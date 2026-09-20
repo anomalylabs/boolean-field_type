@@ -34,6 +34,18 @@ class BooleanFieldType extends FieldType
     protected $filterView = 'anomaly.field_type.boolean::filter';
 
     /**
+     * The available input modes.
+     *
+     * @var array
+     */
+    protected $modes = [
+        'switch',
+        'checkbox',
+        'dropdown',
+        'radio',
+    ];
+
+    /**
      * The config array.
      *
      * @var array
@@ -87,7 +99,9 @@ class BooleanFieldType extends FieldType
      */
     public function mode()
     {
-        return $this->config('mode') ?: config('anomaly.field_type.boolean::input.mode', 'switch');
+        $mode = $this->config('mode') ?: config('anomaly.field_type.boolean::input.mode', 'switch');
+
+        return in_array($mode, $this->modes) ? $mode : 'switch';
     }
 
     /**

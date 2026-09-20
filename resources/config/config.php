@@ -13,6 +13,9 @@ return [
                 'radio'    => 'anomaly.field_type.boolean::config.mode.option.radio',
             ],
         ],
+        'rules'    => [
+            'in:switch,checkbox,dropdown,radio',
+        ],
     ],
     'label'         => [
         'type' => 'anomaly.field_type.text',
